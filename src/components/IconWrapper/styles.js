@@ -7,9 +7,10 @@ export const Wrapper = styled.div`
     padding: 0.25rem;
     background: transparent;
     cursor: pointer;
+    transition: color 0.4s;
   }
 
   &:hover {
-    color: ${props => props.theme.font.hoverColor};
+    color: ${props => props.theme.font.colorBold};
   }
 `;

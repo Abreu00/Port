@@ -24,7 +24,6 @@ export default function Sidebar(props) {
 
   function handleArrowClick() {
     window.scrollTo(0, 0);
-    console.log("oi");
   }
 
   return (

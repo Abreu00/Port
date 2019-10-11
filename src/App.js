@@ -2,13 +2,13 @@ import React from "react";
 import GlobalStyle from "./Globals/styles";
 import { ThemeProvider } from "styled-components";
 import theme from "./Globals/theme";
-import Sidebar from "./components/Sidebar";
+import Main from "./pages/Main/";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Sidebar></Sidebar>
+      <Main></Main>
     </ThemeProvider>
   );
 }

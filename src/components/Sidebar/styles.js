@@ -3,11 +3,14 @@ import styled from "styled-components";
 export const Container = styled.div`
   position: fixed;
   height: 100vh;
-  padding: 22rem 3rem 0 1.2rem;
+  padding-top: ${props => props.theme.header.height};
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 2.5rem;
+  width: ${props => props.theme.sidebar.width};
+  top: 0;
+  left: 0;
 
   & > * {
     margin-bottom: 5rem;
