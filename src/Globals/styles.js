@@ -12,15 +12,17 @@ export default createGlobalStyle`
 
   html, body,
   #root {
-    height: 100%;
+    height: 130%;
   }
 
   html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
   }
 
   body {
     font-family: 'Lato', sans-serif;
+    color: ${props => props.theme.font.color};
     background: ${props => props.theme.background};
   }
 `;
