@@ -29,10 +29,22 @@ export default function Sidebar(props) {
   return (
     <Container>
       <IconWrapper>
-        <FaLinkedin />
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/f%C3%A1bio-de-abreu-371303159/"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin />
+        </a>
       </IconWrapper>
       <IconWrapper>
-        <FaGithub />
+        <a
+          target="_blank"
+          href="https://github.com/Abreu00"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
+        </a>
       </IconWrapper>
       <IconWrapper>
         <FaRegEnvelope />

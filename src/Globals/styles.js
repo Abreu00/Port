@@ -26,4 +26,9 @@ export default createGlobalStyle`
     background: ${props => props.theme.background};
     padding-left: ${props => props.theme.sidebar.width}; 
   }
+
+  a {
+    color: inherit;
+  }
+
 `;

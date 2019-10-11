@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Heading } from "./styles";
 import ToogleItem from "../ToggleItem";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Header(props) {
   const [selectedItem, setSelectedItem] = useState(0);
