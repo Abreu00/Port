@@ -13,17 +13,21 @@ export const Btn = styled.button`
     ${props =>
       props.danger ? props.theme.color.danger : props.theme.font.colorBold};
   transition: all 0.2s;
+  position: relative;
+  outline: 0;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
 
   &:hover {
     background: ${props =>
       props.danger ? props.theme.color.danger : props.theme.font.colorBold};
     color: #eee;
-    transform: translateY(-2px);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
   }
 
   &:active {
-    transform: translate(0);
     box-shadow: none;
   }
 `;

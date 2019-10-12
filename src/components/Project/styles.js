@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin: 0 auto;
   margin-bottom: 8rem;
   transform: skewX(-12deg);
-  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.2);
   padding: 6rem;
   padding-left: 8.5rem; /* Make up for the translateX -2.5rem*/
   font-size: 1.7rem;
