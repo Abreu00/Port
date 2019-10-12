@@ -4,7 +4,7 @@ import media from "../../Globals/mediaQueries";
 export const Container = styled.div`
   background: #eeeeee;
   color: ${props => props.theme.font.colorBold};
-  height: 250px;
+  height: 25rem;
   width: 75%;
   margin: 0 auto;
   margin-bottom: 8rem;
@@ -14,9 +14,11 @@ export const Container = styled.div`
   padding-left: 8.5rem; /* Make up for the translateX -2.5rem*/
   font-size: 1.7rem;
   transition: height 0.3s;
+  position: relative;
 
   & > div {
     transform: skewX(12deg);
+    height: 100%;
   }
 
   @media (max-width: ${media.width.small}) {
@@ -50,4 +52,11 @@ export const Textarea = styled.div`
     font-weight: bold;
     font-size: 2rem;
   }
+`;
+
+export const ButtonWrapper = styled.span`
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
 `;

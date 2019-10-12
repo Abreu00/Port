@@ -9,7 +9,8 @@ export default function Main() {
   const [expandedProject, setExpandedProject] = useState(1);
 
   function handleExpansionGen(key) {
-    return () => setExpandedProject(key);
+    return () =>
+      expandedProject === key ? setExpandedProject(0) : setExpandedProject(key);
   }
 
   return (
