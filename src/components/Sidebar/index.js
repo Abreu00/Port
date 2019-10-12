@@ -7,14 +7,24 @@ import {
   FaChevronUp
 } from "react-icons/fa";
 import IconWrapper from "../IconWrapper";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Sidebar(props) {
   const [showArrow, setShowArrow] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
+  const firstUpdate = useRef(true);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   });
+
+  useEffect(() => {
+    if (firstUpdate.current || showMessage === false) {
+      firstUpdate.current = false;
+      return;
+    }
+    setTimeout(() => setShowMessage(false), 1000);
+  }, [showMessage]);
 
   function handleScroll() {
     const y = window.scrollY;
@@ -34,6 +44,7 @@ export default function Sidebar(props) {
     textarea.select();
     textarea.setSelectionRange(0, 99999);
     document.execCommand("copy");
+    setShowMessage(true);
 
     document.documentElement.removeChild(textarea);
   }
@@ -62,6 +73,7 @@ export default function Sidebar(props) {
         <div onClick={handleClickEmail}>
           <FaRegEnvelope />
         </div>
+        <Message show={showMessage}>Copied</Message>
       </IconWrapper>
       <Bottom showArrow={showArrow}>
         <div onClick={handleArrowClick}>

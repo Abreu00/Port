@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+export const Message = styled.div`
+  position: absolute;
+  font-size: 1.6rem;
+  left: 2px;
+  font-weight: bold;
+  color: ${props => props.theme.font.colorBold};
+  transform: scale(${props => (props.show ? 1 : 0)});
+  transition: transform 0.3s;
+`;
+
 export const Container = styled.div`
   position: fixed;
   height: 100vh;

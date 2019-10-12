@@ -24,4 +24,6 @@ export const Heading = styled.h2`
   font-size: 6rem;
   display: flex;
   align-items: center;
+  transform: rotate(-20deg);
+  text-shadow: 1rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
 `;
