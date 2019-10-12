@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Image, Textarea } from "./styles";
 import Button from "../Button";
 
-export default function Project() {
+export default function Project(props) {
   return (
     <Container>
       <div>
@@ -12,7 +12,7 @@ export default function Project() {
           Projeto de Dashboard para visualização de estados de maquina realizado
           com React
         </Textarea>
-        <Button>Expand</Button>
+        <Button onClick={props.onClick}>Expand</Button>
       </div>
     </Container>
   );

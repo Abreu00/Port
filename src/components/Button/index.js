@@ -2,5 +2,5 @@ import React from "react";
 import { Btn } from "./styles";
 
 export default function Button(props) {
-  return <Btn>{props.children}</Btn>;
+  return <Btn onClick={props.onClick}>{props.children}</Btn>;
 }

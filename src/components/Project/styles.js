@@ -13,6 +13,7 @@ export const Container = styled.div`
   padding: 6rem;
   padding-left: 8.5rem; /* Make up for the translateX -2.5rem*/
   font-size: 1.7rem;
+  transition: height 0.3s;
 
   & > div {
     transform: skewX(12deg);

@@ -32,3 +32,11 @@ export const Container = styled.div`
     }
   }
 `;
+export const ProjectsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  & > :nth-child(${props => props.expanded}) {
+    height: 40rem;
+  }
+`;
