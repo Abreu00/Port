@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Bottom } from "./styles";
+import { Container, Bottom, Message } from "./styles";
 import {
   FaLinkedin,
   FaGithub,
@@ -26,6 +26,18 @@ export default function Sidebar(props) {
     window.scrollTo(0, 0);
   }
 
+  function handleClickEmail() {
+    const textarea = document.createElement("textarea");
+    textarea.style.opacity = 0;
+    textarea.innerText = "fabiowabreu@gmail.com";
+    document.documentElement.append(textarea);
+    textarea.select();
+    textarea.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+
+    document.documentElement.removeChild(textarea);
+  }
+
   return (
     <Container>
       <IconWrapper>
@@ -47,7 +59,9 @@ export default function Sidebar(props) {
         </a>
       </IconWrapper>
       <IconWrapper>
-        <FaRegEnvelope />
+        <div onClick={handleClickEmail}>
+          <FaRegEnvelope />
+        </div>
       </IconWrapper>
       <Bottom showArrow={showArrow}>
         <div onClick={handleArrowClick}>
