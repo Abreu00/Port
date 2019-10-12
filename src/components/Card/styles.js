@@ -40,7 +40,6 @@ export const Container = styled.div`
   background-position: center;
   height: 24rem;
   flex-basis: 16rem;
-  margin: 0 3rem 3rem 0rem;
   border-radius: 1em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: flex;

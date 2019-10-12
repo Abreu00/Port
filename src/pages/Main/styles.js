@@ -1,10 +1,18 @@
 import styled from "styled-components";
+import media from "../../Globals/mediaQueries";
 
 export const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 7rem;
-  max-width: 100rem;
+  width: 100%;
+  justify-content: left;
+
+  @media (max-width: ${media.width.small}) {
+    & {
+      justify-content: space-between;
+    }
+  }
 `;
 
 export const Container = styled.div`
@@ -18,7 +26,7 @@ export const Container = styled.div`
     flex: 1;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: ${media.width.small}) {
     & {
       flex-direction: column-reverse;
     }

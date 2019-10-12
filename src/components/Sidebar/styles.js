@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../Globals/mediaQueries";
 
 export const Message = styled.div`
   font-size: 1.6rem;
@@ -21,7 +22,7 @@ export const Container = styled.div`
   font-size: 2.5rem;
   width: ${props => props.theme.sidebar.width};
 
-  @media (max-width: 800px) {
+  @media (max-width: ${media.width.small}) {
     width: 100%;
     height: 3rem;
     padding-top: 0;
@@ -42,7 +43,7 @@ export const Fixed = styled.div`
     margin-bottom: 5rem;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: ${media.width.small}) {
     position: static;
     width: 100%;
     height: 100%;

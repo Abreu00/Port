@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import media from "../../Globals/mediaQueries";
 
 export const Container = styled.header`
   height: ${props => props.theme.header.height};
-  width: 60%;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
 
@@ -15,6 +16,17 @@ export const Container = styled.header`
     flex-direction: column;
     height: 100%;
     font-size: 1.7rem;
+  }
+
+  @media (max-width: ${media.width.small}) {
+    & > :nth-child(2) {
+      display: none;
+    }
+
+    & {
+      text-align: right;
+      padding-right: 2rem;
+    }
   }
 `;
 

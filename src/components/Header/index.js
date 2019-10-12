@@ -28,6 +28,7 @@ export default function Header(props) {
       </ul>
       <ul>
         <li>About me</li>
+        <li>Experience</li>
       </ul>
     </Container>
   );
