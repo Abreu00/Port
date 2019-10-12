@@ -1,8 +1,8 @@
 import React from "react";
 import Sidebar from "../../components/Sidebar";
 import Header from "../../components/Header";
-import Card from "../../components/Card";
-import { Container, CardContainer } from "./styles";
+import Project from "../../components/Project";
+import { Container } from "./styles";
 import Footer from "../../components/Footer";
 
 export default function Main() {
@@ -12,26 +12,10 @@ export default function Main() {
         <Sidebar></Sidebar>
         <div>
           <Header></Header>
-          <CardContainer>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="The porfolio" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-            <Card title="Directa viewer" category="front-end"></Card>
-          </CardContainer>
+          <Project></Project>
+          <Project></Project>
+          <Project></Project>
+          <Project></Project>
         </div>
       </Container>
       <Footer />
