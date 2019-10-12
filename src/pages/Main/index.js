@@ -19,10 +19,22 @@ export default function Main() {
         <div>
           <Header></Header>
           <ProjectsContainer expanded={expandedProject}>
-            <Project onClick={handleExpansionGen(1)}></Project>
-            <Project onClick={handleExpansionGen(2)}></Project>
-            <Project onClick={handleExpansionGen(3)}></Project>
-            <Project onClick={handleExpansionGen(4)}></Project>
+            <Project
+              onClick={handleExpansionGen(1)}
+              isExpanded={expandedProject === 1}
+            ></Project>
+            <Project
+              onClick={handleExpansionGen(2)}
+              isExpanded={expandedProject === 2}
+            ></Project>
+            <Project
+              onClick={handleExpansionGen(3)}
+              isExpanded={expandedProject === 3}
+            ></Project>
+            <Project
+              onClick={handleExpansionGen(4)}
+              isExpanded={expandedProject === 4}
+            ></Project>
           </ProjectsContainer>
         </div>
       </Container>

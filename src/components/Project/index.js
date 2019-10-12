@@ -12,7 +12,9 @@ export default function Project(props) {
           Projeto de Dashboard para visualização de estados de maquina realizado
           com React
         </Textarea>
-        <Button onClick={props.onClick}>Expand</Button>
+        <Button onClick={props.onClick}>
+          {props.isExpanded ? "Close" : "Expand"}
+        </Button>
       </div>
     </Container>
   );
