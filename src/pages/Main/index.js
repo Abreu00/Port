@@ -12,7 +12,7 @@ export default function Main() {
       <Sidebar></Sidebar>
       <CardContainer>
         <Card title="Directa viewer" category="front-end"></Card>
-        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="The porfolio" category="front-end"></Card>
         <Card title="Directa viewer" category="front-end"></Card>
         <Card title="Directa viewer" category="front-end"></Card>
         <Card title="Directa viewer" category="front-end"></Card>

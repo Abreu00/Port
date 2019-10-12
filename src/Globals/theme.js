@@ -1,6 +1,6 @@
 const theme = {
   color: {
-    primary: "#FAFAFA",
+    primary: "#FAFAFA"
   },
   background: "#FAFAFA",
   font: {
@@ -11,7 +11,7 @@ const theme = {
     height: "22rem"
   },
   sidebar: {
-    width: "5rem"
+    width: "8rem"
   }
 };
 
