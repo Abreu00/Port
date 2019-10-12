@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Bottom, Message } from "./styles";
+import { Container, Bottom, Message, Fixed, MessageWrapper } from "./styles";
 import {
   FaLinkedin,
   FaGithub,
@@ -51,37 +51,39 @@ export default function Sidebar(props) {
 
   return (
     <Container>
-      <IconWrapper>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/f%C3%A1bio-de-abreu-371303159/"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin />
-        </a>
-      </IconWrapper>
-      <IconWrapper>
-        <a
-          target="_blank"
-          href="https://github.com/Abreu00"
-          rel="noopener noreferrer"
-        >
-          <FaGithub />
-        </a>
-      </IconWrapper>
-      <IconWrapper>
-        <div onClick={handleClickEmail}>
-          <FaRegEnvelope />
-        </div>
-        <Message show={showMessage}>Copied</Message>
-      </IconWrapper>
-      <Bottom showArrow={showArrow}>
-        <div onClick={handleArrowClick}>
-          <IconWrapper>
-            <FaChevronUp />
-          </IconWrapper>
-        </div>
-      </Bottom>
+      <Fixed>
+        <IconWrapper>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/f%C3%A1bio-de-abreu-371303159/"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </a>
+        </IconWrapper>
+        <IconWrapper>
+          <a
+            target="_blank"
+            href="https://github.com/Abreu00"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+          </a>
+        </IconWrapper>
+        <IconWrapper>
+          <MessageWrapper onClick={handleClickEmail}>
+            <FaRegEnvelope />
+            <Message show={showMessage}>Copied</Message>
+          </MessageWrapper>
+        </IconWrapper>
+        <Bottom showArrow={showArrow}>
+          <div onClick={handleArrowClick}>
+            <IconWrapper>
+              <FaChevronUp />
+            </IconWrapper>
+          </div>
+        </Bottom>
+      </Fixed>
     </Container>
   );
 }

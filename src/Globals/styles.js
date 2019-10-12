@@ -24,7 +24,6 @@ export default createGlobalStyle`
     font-family: 'Lato', sans-serif;
     color: ${props => props.theme.font.color};
     background: ${props => props.theme.background};
-    padding-left: ${props => props.theme.sidebar.width}; 
   }
 
   a {

@@ -1,37 +1,57 @@
 import styled from "styled-components";
 
 export const Message = styled.div`
-  position: absolute;
   font-size: 1.6rem;
-  left: 0.4rem;
   font-weight: bold;
   color: ${props => props.theme.font.colorBold};
-  transform: scale(${props => (props.show ? 1 : 0)});
   transition: transform 0.3s;
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%) scale(${props => (props.show ? 1 : 0)});
+`;
+
+export const MessageWrapper = styled.div`
+  position: relative;
 `;
 
 export const Container = styled.div`
-  position: fixed;
-  height: 100vh;
-  padding-left: 1.2rem;
+  height: 100%;
   padding-top: ${props => props.theme.header.height};
-  display: flex;
-  flex-direction: column;
-  align-items: left;
   font-size: 2.5rem;
   width: ${props => props.theme.sidebar.width};
-  top: 0;
-  left: 0;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    height: 3rem;
+    padding-top: 0;
+  }
+  div {
+    text-align: center;
+  }
+`;
+
+export const Fixed = styled.div`
+  height: 100vh;
+  position: fixed;
+  width: ${props => props.theme.sidebar.width};
+  display: flex;
+  flex-direction: column;
 
   & > * {
     margin-bottom: 5rem;
   }
+
+  @media (max-width: 800px) {
+    position: static;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 `;
 
 export const Bottom = styled.div`
-  position: absolute;
-  bottom: 0;
-  margin: 0;
   opacity: ${props => (props.showArrow ? 1 : 0)};
   visibility: ${props => (props.showArrow ? "normal" : "hidden")};
   transition: all 0.25s;
