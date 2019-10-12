@@ -10,23 +10,24 @@ export default function Main() {
       <Header></Header>
       <Sidebar></Sidebar>
       <CardContainer>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
+        <Card title="Directa viewer" category="front-end"></Card>
       </CardContainer>
     </>
   );

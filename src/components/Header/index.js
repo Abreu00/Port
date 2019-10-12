@@ -17,13 +17,13 @@ export default function Header(props) {
       <Heading>teee</Heading>
       <ul>
         <ToogleItem onClick={handleItemClick(0)} selected={selectedItem === 0}>
-          das
+          All
         </ToogleItem>
         <ToogleItem onClick={handleItemClick(1)} selected={selectedItem === 1}>
-          ada
+          Web
         </ToogleItem>
         <ToogleItem onClick={handleItemClick(2)} selected={selectedItem === 2}>
-          badas
+          Mobile
         </ToogleItem>
       </ul>
       <ul>
