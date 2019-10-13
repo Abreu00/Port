@@ -23,7 +23,7 @@ export default createGlobalStyle`
   body {
     font-family: 'Lato', sans-serif;
     color: ${props => props.theme.font.color};
-    background: ${props => props.theme.background};
+    background: ${props => props.theme.color.primary};
   }
 
   a {

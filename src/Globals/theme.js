@@ -4,7 +4,6 @@ const theme = {
     secondary: "#eee",
     danger: "#DD2C00"
   },
-  background: "#FAFAFA",
   font: {
     color: "#9E9E9E",
     colorBold: "#424242"
