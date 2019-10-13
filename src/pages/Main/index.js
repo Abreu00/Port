@@ -7,7 +7,7 @@ import Footer from "../../components/Footer";
 import { Context } from "../../context";
 
 export default function Main() {
-  const [expandedProject, setExpandedProject] = useState(1);
+  const [expandedProject, setExpandedProject] = useState(0);
 
   function handleExpansionGen(key) {
     return () =>
