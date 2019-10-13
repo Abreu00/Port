@@ -1,20 +1,6 @@
 import styled from "styled-components";
 import media from "../../Globals/mediaQueries";
 
-export const CardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 7rem;
-  width: 100%;
-  justify-content: left;
-
-  @media (max-width: ${media.width.pc.smaller}) {
-    & {
-      justify-content: space-between;
-    }
-  }
-`;
-
 export const Container = styled.div`
   display: flex;
   width: 100%;
