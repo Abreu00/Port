@@ -9,8 +9,7 @@ export default function Project(props) {
         <Image></Image>
         <Textarea>
           <h2>Directa Viewer</h2>
-          Projeto de Dashboard para visualização de estados de maquina realizado
-          com React
+          Dashboard project for industrial data visualization
         </Textarea>
         <ButtonWrapper>
           <Button danger={props.isExpanded} onClick={props.onClick}>

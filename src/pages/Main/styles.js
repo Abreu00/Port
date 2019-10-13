@@ -8,7 +8,7 @@ export const CardContainer = styled.div`
   width: 100%;
   justify-content: left;
 
-  @media (max-width: ${media.width.small}) {
+  @media (max-width: ${media.width.pc.smaller}) {
     & {
       justify-content: space-between;
     }
@@ -26,7 +26,7 @@ export const Container = styled.div`
     flex: 1;
   }
 
-  @media (max-width: ${media.width.small}) {
+  @media (max-width: ${media.width.pc.smaller}) {
     & {
       flex-direction: column-reverse;
     }
@@ -37,6 +37,6 @@ export const ProjectsContainer = styled.div`
   flex-direction: column;
 
   & > :nth-child(${props => props.expanded}) {
-    height: 40rem;
+    height: 60rem;
   }
 `;

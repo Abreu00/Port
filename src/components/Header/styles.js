@@ -18,7 +18,7 @@ export const Container = styled.header`
     font-size: 1.7rem;
   }
 
-  @media (max-width: ${media.width.small}) {
+  @media (max-width: ${media.width.pc.smaller}) {
     & > :nth-child(2) {
       display: none;
     }

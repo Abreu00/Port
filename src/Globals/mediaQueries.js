@@ -1,5 +1,8 @@
 export default {
   width: {
-    small: "40em"
+    pc: {
+      smaller: "40em",
+      small: "53.125em"
+    }
   }
 };

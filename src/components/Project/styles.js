@@ -21,7 +21,7 @@ export const Container = styled.div`
     height: 100%;
   }
 
-  @media (max-width: ${media.width.small}) {
+  @media (max-width: ${media.width.pc.smaller}) {
     & {
       transform: skew(0deg);
       width: 90%;
@@ -43,6 +43,13 @@ export const Image = styled.img`
   shape-outside: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
   transform: translateX(-2.5rem);
+
+  @media (max-width: ${media.width.pc.small}) {
+    & {
+      height: 11rem;
+      width: 11rem;
+    }
+  }
 `;
 
 export const Textarea = styled.div`
