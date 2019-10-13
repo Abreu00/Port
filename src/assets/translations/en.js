@@ -9,6 +9,7 @@ export default {
       desc: "blalbalblalblalsals"
     }
   ],
+  projectBtn: ["Expand", "Close"],
   header: {
     about: "About me",
     xp: "Experience",
