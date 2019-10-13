@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Heading } from "./styles";
+import { Container, Heading, Langs } from "./styles";
 import ToogleItem from "../ToggleItem";
 import { useState } from "react";
 import { Context } from "../../context";
@@ -46,16 +46,16 @@ export default function Header(props) {
           </>
         )}
       </Context.Consumer>
-      <div>
+      <Langs>
         <Context.Consumer>
           {context => (
             <>
-              <div onClick={() => context.changeLang("en")}>En</div>
+              <div onClick={() => context.changeLang("en")}>EN</div>
               <div onClick={() => context.changeLang("pt")}>PT</div>
             </>
           )}
         </Context.Consumer>
-      </div>
+      </Langs>
     </Container>
   );
 }

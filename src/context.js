@@ -16,6 +16,7 @@ export const Provider = props => {
     <Context.Provider
       value={{
         translation: lang === "pt" ? pt : en,
+        lang,
         changeLang: handleLangChange
       }}
     >

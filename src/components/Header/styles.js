@@ -39,3 +39,21 @@ export const Heading = styled.h2`
   transform: rotate(-20deg);
   text-shadow: 1rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
 `;
+
+export const Langs = styled.div`
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  font-size: 1.4em;
+
+  & > div {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  & > div:hover {
+    color: ${props => props.theme.font.colorBold};
+  }
+`;
