@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Image, Textarea, ButtonWrapper } from "./styles";
+import { Container, Image, Textarea, ButtonWrapper, Expanded } from "./styles";
 import Button from "../Button";
 
 export default function Project(props) {
@@ -17,6 +17,10 @@ export default function Project(props) {
             {props.isExpanded ? "Close" : "Expand"}
           </Button>
         </ButtonWrapper>
+        <Expanded visible={props.isExpanded}>
+          <h2>mdoasmo</h2>
+          <p>sa,da</p>
+        </Expanded>
       </div>
     </Container>
   );

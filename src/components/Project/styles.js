@@ -2,7 +2,7 @@ import styled from "styled-components";
 import media from "../../Globals/mediaQueries";
 
 export const Container = styled.div`
-  background: #eeeeee;
+  background: ${props => props.theme.color.secondary};
   color: ${props => props.theme.font.colorBold};
   height: 25rem;
   width: 75%;
@@ -51,6 +51,7 @@ export const Textarea = styled.div`
   h2 {
     font-weight: bold;
     font-size: 2rem;
+    text-align: left;
   }
 `;
 
@@ -59,4 +60,10 @@ export const ButtonWrapper = styled.span`
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
+`;
+
+export const Expanded = styled.div`
+  transition: all 0.2s;
+  opacity: ${props => (props.visible ? 1 : 0)};
+  visibility: ${props => (props.visible ? "normal" : "hidden")};
 `;
