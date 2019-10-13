@@ -15,5 +15,6 @@ export default {
     xp: "Experience",
     all: "All"
   },
-  footer: "2019 Developed by Fábio Oliveira de Abreu"
+  footer: "2019 Developed by Fábio Oliveira de Abreu",
+  copyMsg: "Copied"
 };

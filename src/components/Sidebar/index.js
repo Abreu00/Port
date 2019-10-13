@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import IconWrapper from "../IconWrapper";
 import { useState, useEffect, useRef } from "react";
+import { Context } from "../../context";
 
 export default function Sidebar(props) {
   const [showArrow, setShowArrow] = useState(false);
@@ -73,7 +74,11 @@ export default function Sidebar(props) {
         <IconWrapper>
           <MessageWrapper onClick={handleClickEmail}>
             <FaRegEnvelope />
-            <Message show={showMessage}>Copied</Message>
+            <Message show={showMessage}>
+              <Context.Consumer>
+                {context => context.translation.copyMsg}
+              </Context.Consumer>
+            </Message>
           </MessageWrapper>
         </IconWrapper>
         <Bottom showArrow={showArrow}>
