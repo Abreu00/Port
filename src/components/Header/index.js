@@ -16,27 +16,36 @@ export default function Header(props) {
   return (
     <Container>
       <Heading>Abreu</Heading>
-      <ul>
-        <ToogleItem onClick={handleItemClick(0)} selected={selectedItem === 0}>
-          All
-        </ToogleItem>
-        <ToogleItem onClick={handleItemClick(1)} selected={selectedItem === 1}>
-          Web
-        </ToogleItem>
-        <ToogleItem onClick={handleItemClick(2)} selected={selectedItem === 2}>
-          Mobile
-        </ToogleItem>
-      </ul>
-      <ul>
-        <Context.Consumer>
-          {context => (
-            <>
-              <li>{context.translation.options[0]}</li>
-              <li>Experience</li>
-            </>
-          )}
-        </Context.Consumer>
-      </ul>
+      <Context.Consumer>
+        {context => (
+          <>
+            <ul>
+              <ToogleItem
+                onClick={handleItemClick(0)}
+                selected={selectedItem === 0}
+              >
+                {context.translation.header.all}
+              </ToogleItem>
+              <ToogleItem
+                onClick={handleItemClick(1)}
+                selected={selectedItem === 1}
+              >
+                Web
+              </ToogleItem>
+              <ToogleItem
+                onClick={handleItemClick(2)}
+                selected={selectedItem === 2}
+              >
+                Mobile
+              </ToogleItem>
+            </ul>
+            <ul>
+              <li>{context.translation.header.about}</li>
+              <li>{context.translation.header.xp}</li>
+            </ul>
+          </>
+        )}
+      </Context.Consumer>
       <div>
         <Context.Consumer>
           {context => (

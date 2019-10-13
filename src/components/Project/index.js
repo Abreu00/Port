@@ -8,8 +8,8 @@ export default function Project(props) {
       <div>
         <Image></Image>
         <Textarea>
-          <h2>Directa Viewer</h2>
-          Dashboard project for industrial data visualization
+          <h2>{props.title}</h2>
+          {props.children}
         </Textarea>
         <ButtonWrapper>
           <Button danger={props.isExpanded} onClick={props.onClick}>
@@ -17,7 +17,6 @@ export default function Project(props) {
           </Button>
         </ButtonWrapper>
         <Expanded visible={props.isExpanded}>
-          <h2>mdoasmo</h2>
           <p>sa,da</p>
         </Expanded>
       </div>
