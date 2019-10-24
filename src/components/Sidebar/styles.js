@@ -1,5 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import media from "../../Globals/mediaQueries";
+
+const animation = keyframes`
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 export const Message = styled.div`
   font-size: 1.6rem;
@@ -38,12 +49,14 @@ export const Fixed = styled.div`
   width: ${props => props.theme.sidebar.width};
   display: flex;
   flex-direction: column;
+  animation: ${animation} 1s 1;
 
   & > * {
     margin-bottom: 5rem;
   }
 
   @media (max-width: ${media.width.pc.smaller}) {
+    animation: none;
     position: static;
     width: 100%;
     height: 100%;
