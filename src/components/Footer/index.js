@@ -1,14 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container } from "./styles";
 import { Context } from "../../context";
 
 export default function Footer() {
-  return (
-    <Container>
-      &copy;{" "}
-      <Context.Consumer>
-        {context => context.translation.footer}
-      </Context.Consumer>
-    </Container>
-  );
+  const context = useContext(Context);
+  return <Container>&copy; {context.translation.footer}</Container>;
 }

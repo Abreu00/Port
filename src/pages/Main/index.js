@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Sidebar from "../../components/Sidebar";
 import Header from "../../components/Header";
 import Project from "../../components/Project";
@@ -8,6 +8,7 @@ import { Context } from "../../context";
 
 export default function Main() {
   const [expandedProject, setExpandedProject] = useState(0);
+  const context = useContext(Context);
 
   function handleExpansionGen(key) {
     return () =>
@@ -21,20 +22,16 @@ export default function Main() {
         <div>
           <Header></Header>
           <ProjectsContainer expanded={expandedProject}>
-            <Context.Consumer>
-              {context =>
-                context.translation.projects.map((project, i) => (
-                  <Project
-                    onClick={handleExpansionGen(i + 1)}
-                    isExpanded={expandedProject === i + 1}
-                    key={i}
-                    title={project.title}
-                  >
-                    {project.desc}
-                  </Project>
-                ))
-              }
-            </Context.Consumer>
+            {context.translation.projects.map((project, i) => (
+              <Project
+                onClick={handleExpansionGen(i + 1)}
+                isExpanded={expandedProject === i + 1}
+                key={i}
+                title={project.title}
+              >
+                {project.desc}
+              </Project>
+            ))}
           </ProjectsContainer>
         </div>
       </Container>
