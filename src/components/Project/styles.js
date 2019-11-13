@@ -1,10 +1,28 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import media from "../../Globals/mediaQueries";
+
+export const Expanded = styled.div`
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+
+  ${props =>
+    props.visible &&
+    css`
+      & {
+        opacity: 1;
+        visibility: inherit;
+        height: 40rem;
+      }
+    `}
+`;
 
 export const Container = styled.div`
   background: ${props => props.theme.color.secondary};
   color: ${props => props.theme.font.colorBold};
-  height: 25rem;
+  min-height: 25rem;
+  height: auto;
   width: 75%;
   margin: 0 auto;
   margin-bottom: 8rem;
@@ -13,12 +31,10 @@ export const Container = styled.div`
   padding: 6rem;
   padding-left: 8.5rem; /* Make up for the translateX -2.5rem*/
   font-size: 1.7rem;
-  transition: height 0.3s;
   position: relative;
 
-  & > div {
+  & > :first-child {
     transform: skewX(12deg);
-    height: 100%;
   }
 
   @media (max-width: ${media.width.pc.smaller}) {
@@ -28,7 +44,7 @@ export const Container = styled.div`
       border-radius: 4px;
     }
 
-    & > div {
+    & > :first-child {
       transform: skew(0deg);
     }
   }
@@ -62,15 +78,13 @@ export const Textarea = styled.div`
   }
 `;
 
-export const ButtonWrapper = styled.span`
+export const ButtonWrapper = styled.div`
   position: absolute;
   left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-`;
+  bottom: 3rem;
+  transform: translateX(-50%) skewX(12deg);
 
-export const Expanded = styled.div`
-  transition: all 0.2s;
-  opacity: ${props => (props.visible ? 1 : 0)};
-  visibility: ${props => (props.visible ? "normal" : "hidden")};
+  @media (max-width: ${media.width.pc.smaller}) {
+    transform: translateX(-50%) skewX(0deg);
+  }
 `;

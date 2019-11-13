@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Btn = styled.button`
   background: transparent;
+  font-family: inherit;
   border: none;
   cursor: pointer;
   font-size: 1em;
