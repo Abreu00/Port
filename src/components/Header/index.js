@@ -14,6 +14,7 @@ export default function Header(props) {
       setSelectedItem(itemId);
     };
   }
+  console.log(props);
 
   return (
     <Container>

@@ -1,10 +1,11 @@
 import React from "react";
 import Header from "../../components/Header";
+import Layout from "../../layouts/";
 
 export default function Experience() {
   return (
-    <div>
+    <Layout>
       <Header hideNav={3} />
-    </div>
+    </Layout>
   );
 }

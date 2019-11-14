@@ -7,6 +7,14 @@ export default {
     {
       title: "This portfolio",
       desc: "blalbalblalblalsals"
+    },
+    {
+      title: "Directa helpchain",
+      desc: "blalbalblalblalsals"
+    },
+    {
+      title: "Matermind app",
+      desc: "blalbalblalblalsals"
     }
   ],
   projectBtn: ["Expand", "Close"],
