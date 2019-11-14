@@ -1,11 +1,13 @@
 import React, { useState, useContext } from "react";
-import { Container, Heading, Langs } from "./styles";
+import { Container, Heading, Langs, Link } from "./styles";
 import ToogleItem from "../ToggleItem";
 import { Context } from "../../context";
+import { Redirect } from "react-router-dom";
 
 export default function Header(props) {
   const [selectedItem, setSelectedItem] = useState(0);
   const context = useContext(Context);
+  const [redirect, setRedirect] = useState({ path: "", go: false });
 
   function handleItemClick(itemId) {
     return () => {
@@ -15,6 +17,7 @@ export default function Header(props) {
 
   return (
     <Container>
+      {redirect.go && <Redirect push to={redirect.path} />}
       <Heading>Abreu</Heading>
       <ul>
         <ToogleItem onClick={handleItemClick(0)} selected={selectedItem === 0}>
@@ -28,8 +31,24 @@ export default function Header(props) {
         </ToogleItem>
       </ul>
       <ul>
-        <li>{context.translation.header.about}</li>
-        <li>{context.translation.header.xp}</li>
+        <li
+          hidden={props.hideNav === 1}
+          onClick={() => setRedirect({ path: "/home", go: true })}
+        >
+          <Link>Home</Link>
+        </li>
+        <li
+          hidden={props.hideNav === 2}
+          onClick={() => setRedirect({ path: "/about", go: true })}
+        >
+          <Link>{context.translation.header.about}</Link>
+        </li>
+        <li
+          hidden={props.hideNav === 3}
+          onClick={() => setRedirect({ path: "/experience", go: true })}
+        >
+          <Link>{context.translation.header.xp}</Link>
+        </li>
       </ul>
       <Langs>
         <div onClick={() => context.changeLang("en")}>EN</div>
