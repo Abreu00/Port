@@ -44,7 +44,7 @@ export const Container = styled.div`
 `;
 
 export const Fixed = styled.div`
-  height: 100vh;
+  height: calc(100vh - ${props => props.theme.header.height});
   position: fixed;
   width: ${props => props.theme.sidebar.width};
   display: flex;
@@ -69,4 +69,5 @@ export const Bottom = styled.div`
   opacity: ${props => (props.showArrow ? 1 : 0)};
   visibility: ${props => (props.showArrow ? "normal" : "hidden")};
   transition: all 0.25s;
+  margin-top: auto;
 `;

@@ -20,7 +20,7 @@ export default function Main() {
       <Container>
         <Sidebar></Sidebar>
         <div>
-          <Header></Header>
+          <Header hideNav={1}></Header>
           <ProjectsContainer expanded={expandedProject}>
             {context.translation.projects.map((project, i) => (
               <Project
