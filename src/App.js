@@ -2,15 +2,15 @@ import React from "react";
 import GlobalStyle from "./Globals/styles";
 import { ThemeProvider } from "styled-components";
 import theme from "./Globals/theme";
-import Main from "./pages/Main/";
 import { Provider } from "./context";
+import Routes from "./routes";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <Provider>
-        <GlobalStyle />
-        <Main></Main>
+        <Routes />
       </Provider>
     </ThemeProvider>
   );

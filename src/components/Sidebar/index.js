@@ -7,13 +7,14 @@ import {
   FaChevronUp
 } from "react-icons/fa";
 import IconWrapper from "../IconWrapper";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { Context } from "../../context";
 
 export default function Sidebar(props) {
   const [showArrow, setShowArrow] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
   const firstUpdate = useRef(true);
+  const context = useContext(Context);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -74,11 +75,7 @@ export default function Sidebar(props) {
         <IconWrapper>
           <MessageWrapper onClick={handleClickEmail}>
             <FaRegEnvelope />
-            <Message show={showMessage}>
-              <Context.Consumer>
-                {context => context.translation.copyMsg}
-              </Context.Consumer>
-            </Message>
+            <Message show={showMessage}>{context.translation.copyMsg}</Message>
           </MessageWrapper>
         </IconWrapper>
         <Bottom showArrow={showArrow}>

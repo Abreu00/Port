@@ -8,7 +8,6 @@ export const Provider = props => {
   const [lang, setLang] = useState("en");
 
   function handleLangChange(lang) {
-    console.log("oi");
     setLang(lang);
   }
 
