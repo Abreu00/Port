@@ -19,6 +19,7 @@ export default {
   ],
   projectBtn: ["Expandir", "Fechar"],
   header: {
+    home: "Home",
     about: "Sobre mim",
     xp: "Experiencia",
     all: "Todos"

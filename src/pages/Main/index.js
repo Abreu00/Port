@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Header from "../../components/Header";
 import Project from "../../components/Project";
 import { ProjectsContainer } from "./styles";
@@ -9,6 +9,10 @@ export default function Main() {
   const [expandedProject, setExpandedProject] = useState(0);
   const context = useContext(Context);
 
+  useEffect(() => {
+    document.title = context.translation.header.home + " | Fábio de Abreu";
+  });
+
   function handleExpansionGen(key) {
     return () =>
       expandedProject === key ? setExpandedProject(0) : setExpandedProject(key);
@@ -16,21 +20,19 @@ export default function Main() {
 
   return (
     <Layout>
-      <div>
-        <Header hideNav={1}></Header>
-        <ProjectsContainer expanded={expandedProject}>
-          {context.translation.projects.map((project, i) => (
-            <Project
-              onClick={handleExpansionGen(i + 1)}
-              isExpanded={expandedProject === i + 1}
-              key={i}
-              title={project.title}
-            >
-              {project.desc}
-            </Project>
-          ))}
-        </ProjectsContainer>
-      </div>
+      <Header hideNav={1}></Header>
+      <ProjectsContainer expanded={expandedProject}>
+        {context.translation.projects.map((project, i) => (
+          <Project
+            onClick={handleExpansionGen(i + 1)}
+            isExpanded={expandedProject === i + 1}
+            key={i}
+            title={project.title}
+          >
+            {project.desc}
+          </Project>
+        ))}
+      </ProjectsContainer>
     </Layout>
   );
 }

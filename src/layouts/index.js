@@ -8,7 +8,7 @@ export default function MainLayout({ children }) {
     <>
       <Container>
         <Sidebar />
-        {children}
+        <div>{children}</div>
       </Container>
       <Footer />
     </>
