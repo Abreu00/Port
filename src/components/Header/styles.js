@@ -62,4 +62,8 @@ export const Link = styled.span`
   cursor: pointer;
   display: inline-block;
   padding: 0.25rem;
+
+  &:hover {
+    color: ${props => props.theme.font.colorBold};
+  }
 `;

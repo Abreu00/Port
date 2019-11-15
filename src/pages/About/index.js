@@ -16,6 +16,11 @@ export default function About() {
       <Header hideNav={2} />
       <TextContainer>
         <h1>About me</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
+          rem eligendi omnis amet in minus voluptatem et nemo quo obcaecati
+          dignissimos, libero eaque culpa quis sint commodi veniam magnam quae.
+        </p>
       </TextContainer>
     </Layout>
   );

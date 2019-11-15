@@ -6,6 +6,11 @@ export const Item = styled.li`
     color: ${props =>
       props.selected ? props.theme.font.colorBold : "inherit"};
   }
+
+  &:hover {
+    color: ${props => props.theme.font.colorBold};
+  }
+
   span {
     cursor: pointer;
     display: inline-block;

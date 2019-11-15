@@ -5,8 +5,9 @@ const theme = {
     danger: "#DD2C00"
   },
   font: {
-    color: "#9E9E9E",
-    colorBold: "#424242"
+    color: "#616161",
+    colorBold: "#212121",
+    colorLight: "#9E9E9E"
   },
   header: {
     height: "22rem"
