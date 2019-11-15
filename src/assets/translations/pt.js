@@ -24,6 +24,10 @@ export default {
     xp: "Experiencia",
     all: "Todos"
   },
+  textPages: {
+    about: [`OLa`, `Xau`],
+    experience: [`Hola hola`, `aafa`, `ssaa`]
+  },
   footer: "2019 Desenvolvido por Fábio Oliveira de Abreu",
   copyMsg: "Copiado"
 };
