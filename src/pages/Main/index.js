@@ -9,6 +9,8 @@ import projects from "../../assets/projects";
 export default function Main() {
   const [expandedProject, setExpandedProject] = useState(0);
   const context = useContext(Context);
+  // 0 for all projects, 1 for web and two for mobile
+  const [selector, setSelector] = useState(0);
 
   useEffect(() => {
     document.title = context.translation.header.home + " | Fábio de Abreu";
@@ -19,11 +21,19 @@ export default function Main() {
       expandedProject === key ? setExpandedProject(0) : setExpandedProject(key);
   }
 
-  return (
-    <Layout>
-      <Header showSelection hideNav={1}></Header>
-      <ProjectsContainer expanded={expandedProject}>
-        {context.translation.projects.map((project, i) => (
+  function selectCondition(projectIndex) {
+    return selector === 0 || selector === projects[projectIndex].type;
+  }
+
+  function handleSelection(itemId) {
+    /* Handles click for toogle item on header*/
+    return () => setSelector(itemId);
+  }
+
+  function mapProjects() {
+    return context.translation.projects.map(
+      (project, i) =>
+        selectCondition(i) && (
           <Project
             onClick={handleExpansionGen(i + 1)}
             isExpanded={expandedProject === i + 1}
@@ -33,7 +43,20 @@ export default function Main() {
           >
             {project.desc}
           </Project>
-        ))}
+        )
+    );
+  }
+
+  return (
+    <Layout>
+      <Header
+        showSelection
+        selected={selector}
+        handleSelection={handleSelection}
+        hideNav={1}
+      ></Header>
+      <ProjectsContainer expanded={expandedProject}>
+        {mapProjects()}
       </ProjectsContainer>
     </Layout>
   );

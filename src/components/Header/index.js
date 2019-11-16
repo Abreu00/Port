@@ -4,39 +4,41 @@ import ToogleItem from "../ToggleItem";
 import { Context } from "../../context";
 import { Link } from "react-router-dom";
 
-export default function Header({ hideNav, showSelection }) {
-  const [selectedItem, setSelectedItem] = useState(0);
+export default function Header({
+  hideNav,
+  showSelection,
+  selected,
+  handleSelection
+}) {
   const context = useContext(Context);
-
-  function handleItemClick(itemId) {
-    return () => {
-      setSelectedItem(itemId);
-    };
-  }
 
   return (
     <>
-      <Container showSelection={showSelection}>
+      <Container>
         <Heading>Abreu</Heading>
         <div>
-          <ToogleItem
-            onClick={handleItemClick(0)}
-            selected={selectedItem === 0}
-          >
-            {context.translation.header.all}
-          </ToogleItem>
-          <ToogleItem
-            onClick={handleItemClick(1)}
-            selected={selectedItem === 1}
-          >
-            Web
-          </ToogleItem>
-          <ToogleItem
-            onClick={handleItemClick(2)}
-            selected={selectedItem === 2}
-          >
-            Mobile
-          </ToogleItem>
+          {showSelection && (
+            <>
+              <ToogleItem
+                onClick={handleSelection(0)}
+                selected={selected === 0}
+              >
+                {context.translation.header.all}
+              </ToogleItem>
+              <ToogleItem
+                onClick={handleSelection(1)}
+                selected={selected === 1}
+              >
+                Web
+              </ToogleItem>
+              <ToogleItem
+                onClick={handleSelection(2)}
+                selected={selected === 2}
+              >
+                Mobile
+              </ToogleItem>
+            </>
+          )}
         </div>
         <nav>
           {hideNav !== 1 && <Link to="/home">Home</Link>}

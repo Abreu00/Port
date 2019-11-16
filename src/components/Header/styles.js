@@ -8,14 +8,6 @@ export const Container = styled.header`
   justify-content: flex-start;
   font-size: 1.7rem;
 
-  ${props =>
-    !props.showSelection &&
-    css`
-      & div {
-        visibility: hidden;
-      }
-    `}
-
   nav,
   div {
     flex: 1;
