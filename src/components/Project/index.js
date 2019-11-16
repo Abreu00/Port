@@ -25,7 +25,7 @@ export default function Project(props) {
   return (
     <Container ref={ref} expanded={props.isExpanded}>
       <div>
-        <Image></Image>
+        <Image src={props.img}></Image>
         <Textarea>
           <h2>{props.title}</h2>
           {props.children}

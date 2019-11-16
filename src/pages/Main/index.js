@@ -4,6 +4,7 @@ import Project from "../../components/Project";
 import { ProjectsContainer } from "./styles";
 import { Context } from "../../context";
 import Layout from "../../layouts/";
+import projects from "../../assets/projects";
 
 export default function Main() {
   const [expandedProject, setExpandedProject] = useState(0);
@@ -28,6 +29,7 @@ export default function Main() {
             isExpanded={expandedProject === i + 1}
             key={i}
             title={project.title}
+            img={projects[i].img}
           >
             {project.desc}
           </Project>

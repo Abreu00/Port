@@ -53,7 +53,7 @@ export const Container = styled.div`
 export const Image = styled.img`
   height: 15rem;
   width: 15rem;
-  background-image: url("./img/directa.png");
+  background-image: url(${props => props.src});
   background-size: cover;
   float: left;
   shape-outside: circle(50% at 50% 50%);
