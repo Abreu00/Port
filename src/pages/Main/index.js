@@ -20,7 +20,7 @@ export default function Main() {
 
   return (
     <Layout>
-      <Header hideNav={1}></Header>
+      <Header showSelection hideNav={1}></Header>
       <ProjectsContainer expanded={expandedProject}>
         {context.translation.projects.map((project, i) => (
           <Project

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import media from "../../Globals/mediaQueries";
 
 export const Container = styled.header`
@@ -6,16 +6,41 @@ export const Container = styled.header`
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  font-size: 1.7rem;
 
-  ul {
+  ${props =>
+    !props.showSelection &&
+    css`
+      & div {
+        visibility: hidden;
+      }
+    `}
+
+  nav,
+  div {
     flex: 1;
-    list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: left;
     flex-direction: column;
-    height: 100%;
-    font-size: 1.7rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  a {
+    cursor: pointer;
+    display: inline-block;
+    width: auto;
+    padding: 0.25rem;
+    text-decoration: none;
+
+    &:hover {
+      color: ${props => props.theme.font.colorBold};
+    }
+  }
+
+  @media (max-width: ${media.width.tablet}) {
+    & div {
+      padding-left: 15%;
+    }
   }
 
   @media (max-width: ${media.width.pc.smaller}) {
@@ -25,7 +50,10 @@ export const Container = styled.header`
 
     & {
       text-align: right;
-      padding-right: 2rem;
+      padding: 0 2rem;
+    }
+    & nav {
+      align-items: flex-end;
     }
   }
 `;
@@ -36,34 +64,25 @@ export const Heading = styled.h2`
   font-size: 6rem;
   display: flex;
   align-items: center;
-  transform: rotate(-20deg);
-  text-shadow: 1rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2);
+  font-family: "Courgette", cursive;
+  transform: rotate(-12deg) translateY(-3rem);
+  text-shadow: 1rem 0.5rem 0.5rem rgba(33, 33, 33, 0.2);
 `;
 
 export const Langs = styled.div`
   position: absolute;
   top: 1rem;
   right: 0;
-  font-size: 1.4em;
+  font-size: 1.4rem;
 
-  & > div {
+  & span {
     display: inline-block;
     cursor: pointer;
     margin-right: 1.5rem;
     padding: 0.5rem;
   }
 
-  & > div:hover {
-    color: ${props => props.theme.font.colorBold};
-  }
-`;
-
-export const Link = styled.span`
-  cursor: pointer;
-  display: inline-block;
-  padding: 0.25rem;
-
-  &:hover {
+  & span:hover {
     color: ${props => props.theme.font.colorBold};
   }
 `;

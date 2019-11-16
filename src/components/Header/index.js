@@ -1,13 +1,12 @@
 import React, { useState, useContext } from "react";
-import { Container, Heading, Langs, Link } from "./styles";
+import { Container, Heading, Langs } from "./styles";
 import ToogleItem from "../ToggleItem";
 import { Context } from "../../context";
-import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function Header(props) {
+export default function Header({ hideNav, showSelection }) {
   const [selectedItem, setSelectedItem] = useState(0);
   const context = useContext(Context);
-  const [redirect, setRedirect] = useState({ path: "", go: false });
 
   function handleItemClick(itemId) {
     return () => {
@@ -16,44 +15,43 @@ export default function Header(props) {
   }
 
   return (
-    <Container>
-      {redirect.go && <Redirect push to={redirect.path} />}
-      <Heading>Abreu</Heading>
-      <ul>
-        <ToogleItem onClick={handleItemClick(0)} selected={selectedItem === 0}>
-          {context.translation.header.all}
-        </ToogleItem>
-        <ToogleItem onClick={handleItemClick(1)} selected={selectedItem === 1}>
-          Web
-        </ToogleItem>
-        <ToogleItem onClick={handleItemClick(2)} selected={selectedItem === 2}>
-          Mobile
-        </ToogleItem>
-      </ul>
-      <ul>
-        <li
-          hidden={props.hideNav === 1}
-          onClick={() => setRedirect({ path: "/home", go: true })}
-        >
-          <Link>Home</Link>
-        </li>
-        <li
-          hidden={props.hideNav === 2}
-          onClick={() => setRedirect({ path: "/about", go: true })}
-        >
-          <Link>{context.translation.header.about}</Link>
-        </li>
-        <li
-          hidden={props.hideNav === 3}
-          onClick={() => setRedirect({ path: "/experience", go: true })}
-        >
-          <Link>{context.translation.header.xp}</Link>
-        </li>
-      </ul>
+    <>
+      <Container showSelection={showSelection}>
+        <Heading>Abreu</Heading>
+        <div>
+          <ToogleItem
+            onClick={handleItemClick(0)}
+            selected={selectedItem === 0}
+          >
+            {context.translation.header.all}
+          </ToogleItem>
+          <ToogleItem
+            onClick={handleItemClick(1)}
+            selected={selectedItem === 1}
+          >
+            Web
+          </ToogleItem>
+          <ToogleItem
+            onClick={handleItemClick(2)}
+            selected={selectedItem === 2}
+          >
+            Mobile
+          </ToogleItem>
+        </div>
+        <nav>
+          {hideNav !== 1 && <Link to="/home">Home</Link>}
+          {hideNav !== 2 && (
+            <Link to="/about">{context.translation.header.about}</Link>
+          )}
+          {hideNav !== 3 && (
+            <Link to="/experience">{context.translation.header.xp}</Link>
+          )}
+        </nav>
+      </Container>
       <Langs>
-        <div onClick={() => context.changeLang("en")}>EN</div>
-        <div onClick={() => context.changeLang("pt")}>PT</div>
+        <span onClick={() => context.changeLang("en")}>EN</span>
+        <span onClick={() => context.changeLang("pt")}>PT</span>
       </Langs>
-    </Container>
+    </>
   );
 }
