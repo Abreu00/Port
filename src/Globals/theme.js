@@ -10,7 +10,7 @@ const theme = {
     colorLight: "#9E9E9E"
   },
   header: {
-    height: "22rem"
+    height: "20rem"
   },
   sidebar: {
     width: "8rem"
