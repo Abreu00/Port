@@ -7,10 +7,13 @@ import Layout from "../../layouts/";
 import projects from "../../assets/projects";
 
 export default function Main() {
-  const [expandedProject, setExpandedProject] = useState(0);
   const context = useContext(Context);
   // 0 for all projects, 1 for web and two for mobile
   const [selector, setSelector] = useState(0);
+  const [expansion, setExpansion] = useState({
+    current: -1,
+    prev: -1
+  });
 
   useEffect(() => {
     document.title = context.translation.header.home + " | Fábio de Abreu";
@@ -18,7 +21,9 @@ export default function Main() {
 
   function handleExpansionGen(key) {
     return () =>
-      expandedProject === key ? setExpandedProject(0) : setExpandedProject(key);
+      expansion.current === key
+        ? setExpansion({ prev: expansion.current, current: -1 })
+        : setExpansion({ prev: expansion.current, current: key });
   }
 
   function selectCondition(projectIndex) {
@@ -35,8 +40,9 @@ export default function Main() {
       (project, i) =>
         selectCondition(i) && (
           <Project
-            onClick={handleExpansionGen(i + 1)}
-            isExpanded={expandedProject === i + 1}
+            onClick={handleExpansionGen(i)}
+            isExpanded={expansion.current === i}
+            isPrev={expansion.prev === i}
             key={i}
             title={project.title}
             img={projects[i].img}
@@ -55,7 +61,7 @@ export default function Main() {
         handleSelection={handleSelection}
         hideNav={1}
       ></Header>
-      <ProjectsContainer expanded={expandedProject}>
+      <ProjectsContainer expanded={expansion}>
         {mapProjects()}
       </ProjectsContainer>
     </Layout>

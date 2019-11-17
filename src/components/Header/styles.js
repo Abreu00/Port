@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import media from "../../Globals/mediaQueries";
 
 export const Container = styled.header`

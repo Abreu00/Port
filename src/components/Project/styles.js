@@ -2,20 +2,19 @@ import styled, { css } from "styled-components";
 import media from "../../Globals/mediaQueries";
 
 export const Expanded = styled.div`
-  transition: all 0.5s;
   opacity: 0;
-  visibility: hidden;
+  transition: all 0.6s, height 0.4s;
   height: 0;
-
-  ${props =>
-    props.visible &&
-    css`
-      & {
-        opacity: 1;
-        visibility: inherit;
-        height: 40rem;
-      }
-    `}
+  visibility: hidden
+    ${props =>
+      props.visible &&
+      css`
+        & {
+          height: auto;
+          opacity: 1;
+          visibility: visible;
+        }
+      `};
 `;
 
 export const Container = styled.div`
@@ -32,12 +31,13 @@ export const Container = styled.div`
   padding-left: 8.5rem; /* Make up for the translateX -2.5rem*/
   font-size: 1.7rem;
   position: relative;
+  overflow: hidden;
 
   & > :first-child {
     transform: skewX(12deg);
   }
 
-  @media (max-width: ${media.width.pc.smaller}) {
+  @media (max-width: ${media.width.tablet}) {
     & {
       transform: skew(0deg);
       width: 90%;
@@ -84,7 +84,7 @@ export const ButtonWrapper = styled.div`
   bottom: 3rem;
   transform: translateX(-50%) skewX(12deg);
 
-  @media (max-width: ${media.width.pc.smaller}) {
+  @media (max-width: ${media.width.tablet}) {
     transform: translateX(-50%) skewX(0deg);
   }
 `;
