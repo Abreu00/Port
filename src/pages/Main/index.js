@@ -43,6 +43,7 @@ export default function Main() {
             onClick={handleExpansionGen(i)}
             isExpanded={expansion.current === i}
             isPrev={expansion.prev === i}
+            index={i}
             key={i}
             title={project.title}
             img={projects[i].img}

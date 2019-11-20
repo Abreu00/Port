@@ -17,7 +17,7 @@ export default {
       desc: "blalbalblalblalsals"
     }
   ],
-  projectBtn: ["Expand", "Close"],
+  projectBtn: ["View project", "Close"],
   header: {
     home: "Home",
     about: "About me",
