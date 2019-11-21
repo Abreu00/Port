@@ -12,9 +12,9 @@ export default function Project({ match }) {
   const context = useContext(Context);
   const projectNumber = parseInt(match.params.id) - 1;
   const project = projects[projectNumber];
-  const img = require("../../assets/images/directa.png");
+  const img = require("../../assets/images/port.png");
 
-  const [imgSize, setImgSize] = useState({
+  const [imgState, setImgState] = useState({
     width: "0rem",
     height: "0rem"
   });
@@ -23,7 +23,7 @@ export default function Project({ match }) {
     const img = e.target;
     const aspectRatio = img.naturalWidth / img.naturalHeight;
 
-    setImgSize({
+    setImgState({
       width: `${aspectRatio * 25}rem`,
       height: `${(1 / aspectRatio) * 25}rem`
     });
@@ -36,8 +36,8 @@ export default function Project({ match }) {
         <Title>{context.translation.projects[projectNumber].title}</Title>
         <ClearFix>
           <Image
-            width={imgSize.width}
-            height={imgSize.height}
+            width={imgState.width}
+            height={imgState.height}
             onLoad={handleImageLoad}
             src={img}
           ></Image>
