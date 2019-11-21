@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Layout from "../../layouts";
 import Header from "../../components/Header";
 import ClearFix from "../../components/ClearFix";
@@ -12,7 +12,12 @@ export default function Project({ match }) {
   const context = useContext(Context);
   const projectNumber = parseInt(match.params.id) - 1;
   const project = projects[projectNumber];
-  const img = require("../../assets/images/port.png");
+  const img = require("../../assets/images/directa.png");
+
+  useEffect(() => {
+    document.title =
+      context.translation.projects[projectNumber].title + " | Fábio de Abreu";
+  }, [context.translation, projectNumber]);
 
   const [imgState, setImgState] = useState({
     width: "0rem",

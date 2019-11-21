@@ -39,8 +39,8 @@ export const Image = styled.img`
   @media (max-width: ${mediaQuery.width.pc.smaller}) {
     & {
       height: 30rem;
-      width: calc(100vw - 2rem);
-      margin: 0 -2rem 2.2rem -2rem;
+      width: calc(100vw);
+      margin: 0 0 2.2rem -2rem;
       transform: scale(1);
       object-fit: cover;
       object-position: top;

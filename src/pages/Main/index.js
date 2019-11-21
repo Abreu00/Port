@@ -17,7 +17,7 @@ export default function Main() {
 
   useEffect(() => {
     document.title = context.translation.header.home + " | Fábio de Abreu";
-  });
+  }, [context.translation]);
 
   function handleExpansionGen(key) {
     return () =>
