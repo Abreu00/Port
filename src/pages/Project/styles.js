@@ -5,6 +5,7 @@ import mediaQuery from "../../Globals/mediaQueries";
 export const Container = styled.div`
   padding: 0 calc(${theme.sidebar.width} + 3rem) 0 3rem;
   font-size: 1.8rem;
+  text-align: justify;
 
   @media (max-width: ${mediaQuery.width.pc.smaller}) {
     padding: 2rem;
@@ -26,9 +27,9 @@ export const Image = styled.img`
   margin: 0 0 1.6rem 1.6rem;
   transform: scale(0.9);
   box-shadow: 0 1rem 1.25rem 0 rgba(33, 33, 33, 0.25),
-    0 0 0 0.4rem ${props => props.theme.font.colorBold};
+    0 0 0 -0.4rem ${props => props.theme.font.colorBold};
   border-radius: 0.5rem;
-  transition: transform 0.5s, box-shadow 0.4s;
+  transition: transform 0.5s, box-shadow 0.5s;
   cursor: pointer;
 
   &:hover {
