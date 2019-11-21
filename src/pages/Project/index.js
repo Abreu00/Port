@@ -12,7 +12,7 @@ export default function Project({ match }) {
   const context = useContext(Context);
   const projectNumber = parseInt(match.params.id) - 1;
   const project = projects[projectNumber];
-  const img = require("../../assets/images/directa.png");
+  const img = project.img;
 
   useEffect(() => {
     document.title =
@@ -45,8 +45,7 @@ export default function Project({ match }) {
             height={imgState.height}
             onLoad={handleImageLoad}
             src={img}
-          ></Image>
-
+          />
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
             veritatis dignissimos sint nisi magni! Praesentium repellendus
