@@ -8,7 +8,7 @@ export const Container = styled.div`
   text-align: justify;
 
   @media (max-width: ${mediaQuery.width.pc.smaller}) {
-    padding: 2rem;
+    padding: 0 2rem;
   }
 `;
 
@@ -39,20 +39,23 @@ export const Image = styled.img`
 
   @media (max-width: ${mediaQuery.width.pc.smaller}) {
     & {
-      height: 30rem;
-      width: calc(100vw);
-      margin: 0 0 2.2rem -2rem;
+      height: auto;
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0 calc(-50vw + 50%);
+      margin-bottom: 2rem;
       transform: scale(1);
       object-fit: cover;
       object-position: top;
       border-radius: 0;
       float: none;
-      box-shadow: 0 1rem 1.25rem 0 rgba(33, 33, 33, 0.25);
+      box-shadow: none;
+      box-shadow: 0 0.5rem 1.25rem 0 rgba(33, 33, 33, 0.15);
     }
 
     &:hover {
       transform: scale(1);
-      box-shadow: 0 1rem 1.25rem 0 rgba(33, 33, 33, 0.25);
+      box-shadow: 0 0.5rem 1.25rem 0 rgba(33, 33, 33, 0.1);
     }
   }
 `;

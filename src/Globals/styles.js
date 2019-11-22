@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import mediaQueries from "./mediaQueries";
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Courgette|Lato&display=swap');
@@ -28,6 +29,12 @@ export default createGlobalStyle`
 
   a {
     color: inherit;
+  }
+
+  @media (max-width: ${mediaQueries.width.pc.smaller}) {
+    body {
+      overflow-x: hidden;
+    }
   }
 
 `;
