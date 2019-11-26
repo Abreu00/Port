@@ -15,6 +15,17 @@ export const Container = styled.div`
 export const Row = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+
+  @media (max-width: ${mediaQuery.width.pc.small}) {
+    flex-direction: column;
+
+    > :last-child {
+      position: fixed;
+      bottom: 2rem;
+    }
+  }
 `;
 
 export const Title = styled.h1`
@@ -23,7 +34,6 @@ export const Title = styled.h1`
   text-align: left;
   font-weight: bold;
   color: ${props => props.theme.font.colorBold};
-  margin-bottom: 4.5rem;
 
   @media (max-width: ${mediaQuery.width.pc.smaller}) {
     & {
