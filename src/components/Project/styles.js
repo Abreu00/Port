@@ -1,21 +1,5 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import media from "../../Globals/mediaQueries";
-
-export const Expanded = styled.div`
-  opacity: 0;
-  transition: all 0.6s, height 0.4s;
-  height: 0;
-  visibility: hidden
-    ${props =>
-      props.visible &&
-      css`
-        & {
-          height: auto;
-          opacity: 1;
-          visibility: visible;
-        }
-      `};
-`;
 
 export const Container = styled.div`
   background: ${props => props.theme.color.secondary};
@@ -53,8 +37,6 @@ export const Container = styled.div`
 export const Image = styled.img`
   height: 15rem;
   width: 15rem;
-  background-image: url(${props => props.src});
-  background-size: cover;
   float: left;
   shape-outside: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
@@ -86,5 +68,13 @@ export const ButtonWrapper = styled.div`
 
   @media (max-width: ${media.width.tablet}) {
     transform: translateX(-50%) skewX(0deg);
+  }
+
+  a {
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+    padding: 0.1em 1em 0 1em;
   }
 `;

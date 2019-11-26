@@ -9,7 +9,6 @@ export const Btn = styled.button`
   color: ${props =>
     props.danger ? props.theme.color.danger : props.theme.font.colorBold};
   font-weight: bold;
-  padding: 0.25em 1em 0 1em;
   border-bottom: 1px solid
     ${props =>
       props.danger ? props.theme.color.danger : props.theme.font.colorBold};

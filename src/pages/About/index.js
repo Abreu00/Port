@@ -9,7 +9,7 @@ export default function About() {
 
   useEffect(() => {
     document.title = context.translation.header.about + " | Fábio de Abreu";
-  });
+  }, [context.translation]);
 
   return (
     <Layout>
