@@ -3,6 +3,9 @@ import { Container, Heading, Langs } from "./styles";
 import ToogleItem from "../ToggleItem";
 import { Context } from "../../context";
 import { Link } from "react-router-dom";
+import AwesomeLetter from "../AwesomeLetter";
+
+const header = "Abreu";
 
 export default function Header({
   hideNav,
@@ -15,7 +18,11 @@ export default function Header({
   return (
     <>
       <Container>
-        <Heading>Abreu</Heading>
+        <Heading>
+          {header.split("").map((letter, index) => (
+            <AwesomeLetter key={index}>{letter}</AwesomeLetter>
+          ))}
+        </Heading>
         <div>
           {showSelection && (
             <>

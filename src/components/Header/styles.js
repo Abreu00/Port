@@ -59,6 +59,7 @@ export const Heading = styled.h2`
   font-family: "Courgette", cursive;
   transform: rotate(-12deg) translateY(-3rem);
   text-shadow: 1rem 0.5rem 0.5rem rgba(33, 33, 33, 0.2);
+  cursor: default;
 `;
 
 export const Langs = styled.div`
