@@ -35,7 +35,7 @@ export const Container = styled.header`
     }
   }
 
-  @media (max-width: ${media.width.pc.smaller}) {
+  @media (max-width: ${media.width.tablet.portrait}) {
     & > :nth-child(2) {
       display: none;
     }

@@ -33,7 +33,7 @@ export const Container = styled.div`
   font-size: 2.5rem;
   width: ${props => props.theme.sidebar.width};
 
-  @media (max-width: ${media.width.pc.smaller}) {
+  @media (max-width: ${media.width.tablet.portrait}) {
     width: 100%;
     height: 3rem;
     padding-top: 0;
@@ -55,7 +55,7 @@ export const Fixed = styled.div`
     margin-bottom: 5rem;
   }
 
-  @media (max-width: ${media.width.pc.smaller}) {
+  @media (max-width: ${media.width.tablet.portrait}) {
     animation: none;
     position: static;
     width: 100%;

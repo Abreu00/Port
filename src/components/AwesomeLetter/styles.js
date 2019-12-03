@@ -29,5 +29,5 @@ export const Container = styled.span`
   animation-name: ${props => (props.running ? letterAnimation : "")};
   animation-duration: 1s;
   animation-timing-function: ease-in;
-  line-height: 1.6em;
+  line-height: 1em;
 `;

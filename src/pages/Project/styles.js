@@ -18,12 +18,13 @@ export const Row = styled.div`
   align-items: center;
   margin-bottom: 3rem;
 
-  @media (max-width: ${mediaQuery.width.pc.small}) {
+  @media (max-width: ${mediaQuery.width.pc.smaller}) {
     flex-direction: column;
 
     > :last-child {
+      bottom: 15%;
+      transform: translateY(-50%);
       position: fixed;
-      bottom: 2rem;
     }
   }
 `;

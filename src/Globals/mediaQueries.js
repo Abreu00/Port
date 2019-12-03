@@ -4,6 +4,11 @@ export default {
       smaller: "40em",
       small: "53.125em"
     },
-    tablet: "56.25em"
+    phone: "37.5em",
+    tablet: {
+      portrait: "56.25em",
+      landscape: "75em"
+    },
+    large: "112.5"
   }
 };

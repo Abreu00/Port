@@ -21,7 +21,7 @@ export const Container = styled.div`
     transform: skewX(12deg);
   }
 
-  @media (max-width: ${media.width.tablet}) {
+  @media (max-width: ${media.width.tablet.portrait}) {
     & {
       transform: skew(0deg);
       width: 90%;
@@ -66,7 +66,7 @@ export const ButtonWrapper = styled.div`
   bottom: 3rem;
   transform: translateX(-50%) skewX(12deg);
 
-  @media (max-width: ${media.width.tablet}) {
+  @media (max-width: ${media.width.tablet.portrait}) {
     transform: translateX(-50%) skewX(0deg);
   }
 

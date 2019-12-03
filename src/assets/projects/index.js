@@ -1,5 +1,12 @@
 function importAll(r) {
-  return r.keys().map(r);
+  r.keys().map(r);
+  const filePaths = r.keys().map(r);
+  const images = {};
+  filePaths.forEach(path => {
+    const fileName = path.split("/")[3].split(".")[0];
+    images[fileName] = path;
+  });
+  return images;
 }
 
 const images = importAll(
@@ -13,22 +20,22 @@ const images = importAll(
 
 const projects = [
   {
-    img: images[0],
+    img: images["viewer"],
     type: 1,
     ctas: [{ text: "View on github", link: "https://github.com/Abreu00" }]
   },
   {
-    img: images[1],
+    img: images["port"],
     type: 1,
     ctas: [{ text: "View on github", link: "https://github.com/Abreu00" }]
   },
   {
-    img: images[0],
+    img: images["helpchain"],
     type: 1,
     ctas: [{ text: "View on github", link: "https://github.com/Abreu00" }]
   },
   {
-    img: images[0],
+    img: images["viewer"],
     type: 2,
     ctas: [{ text: "View on github", link: "https://github.com/Abreu00" }]
   }

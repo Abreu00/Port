@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { Container } from "./styles";
 import PropTypes from "prop-types";
 
-export default function AwesomeLetter({ children }) {
+export default function AwesomeLetter({ children, initial }) {
   const [animated, setAnimated] = useState(false);
 
   function handleMouseOver() {
     if (!animated) {
       setAnimated(true);
-      console.log("set");
     }
   }
 
@@ -28,5 +27,6 @@ export default function AwesomeLetter({ children }) {
 }
 
 AwesomeLetter.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
+  initial: PropTypes.bool
 };

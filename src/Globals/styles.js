@@ -37,4 +37,35 @@ export default createGlobalStyle`
     }
   }
 
+  @media (max-width: ${mediaQueries.width.phone}) {
+    /* 600px */
+    html {
+      font-size: 45%;
+    }
+  }
+
+  @media (max-width: ${mediaQueries.width.tablet.portrait}) {
+    /* 900px */
+    html {
+      font-size: 50%;
+    }
+  }
+
+  @media (max-width: ${mediaQueries.width.tablet.landscape}) {
+    /* 1200px */
+    html {
+      font-size: 55%;
+    }
+  }
+
+  @media (min-width: ${mediaQueries.width.large}) {
+    /* 1800px */
+    html {
+      font-size: 75%;
+    }
+  }
+
+
+  
+
 `;
