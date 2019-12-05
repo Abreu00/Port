@@ -43,8 +43,9 @@ export const Image = styled.img`
   height: 15rem;
   width: 15rem;
   border-radius: 50%;
-  box-shadow: 0 0 0 1.25rem rgba(0, 92, 151, 0.4);
+  box-shadow: 0 0 0 1.25rem rgba(0, 92, 151, 1);
   transition: transform 0.4s;
+  user-select: none;
 
   @media (max-width: ${media.width.tablet.portrait}) {
     width: 11rem;
@@ -65,6 +66,12 @@ export const Textarea = styled.span`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (max-width: 43.75em) {
+    width: 100%;
+    text-align: left;
+    padding-left: 20rem;
+  }
 
   @media (max-width: ${media.width.phone}) {
     display: none;

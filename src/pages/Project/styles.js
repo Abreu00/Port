@@ -56,6 +56,7 @@ export const Image = styled.img`
     0 0 0 -0.4rem ${props => props.theme.font.colorBold};
   border-radius: 0.5rem;
   transition: transform 0.5s, box-shadow 0.5s;
+  user-select: none;
   &:hover {
     transform: scale(1);
     box-shadow: 0 1rem 1.25rem 0 rgba(33, 33, 33, 0.25), 0 0 0 1rem transparent;

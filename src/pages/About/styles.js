@@ -3,6 +3,9 @@ import media from "../../Globals/mediaQueries";
 
 export const TextContainer = styled.div`
   padding: 0 calc(${props => props.theme.sidebar.width} + 12rem) 0 12rem;
+  max-width: 120rem;
+  text-align: justify;
+  margin: 0 auto;
 
   h1 {
     text-align: center;
@@ -20,15 +23,10 @@ export const TextContainer = styled.div`
     margin-bottom: 2rem;
   }
 
-  @media (max-width: ${media.width.tablet}) {
-    & {
-      padding: 0 calc(${props => props.theme.sidebar.width} + 4rem) 0 4rem;
-    }
+  @media (max-width: ${media.width.tablet.portrait}) {
+    padding: 0 12rem;
   }
-
-  @media (max-width: ${media.width.pc.smaller}) {
-    & {
-      padding: 0 5rem;
-    }
+  @media (max-width: ${media.width.phone}) {
+    padding: 0 3.5rem;
   }
 `;
