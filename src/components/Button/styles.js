@@ -1,33 +1,10 @@
 import styled from "styled-components";
 
-export const Btn = styled.button`
-  background: transparent;
-  font-family: inherit;
-  border: none;
-  cursor: pointer;
-  font-size: 1em;
-  color: ${props =>
-    props.danger ? props.theme.color.danger : props.theme.font.colorBold};
-  font-weight: bold;
-  border-bottom: 1px solid
-    ${props =>
-      props.danger ? props.theme.color.danger : props.theme.font.colorBold};
-  transition: all 0.2s;
-  position: relative;
-  outline: 0;
-
-  &::-moz-focus-inner {
-    border: 0;
-  }
-
-  &:hover {
-    background: ${props =>
-      props.danger ? props.theme.color.danger : props.theme.font.colorBold};
-    color: #eee;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
-  }
-
-  &:active {
-    box-shadow: none;
-  }
+export const Btn = styled.div`
+  background-image: linear-gradient(to right, #005c97, #363795);
+  background-size: 200%;
+  color: white;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 1.5rem rgba(33, 33, 33, 0.2);
 `;

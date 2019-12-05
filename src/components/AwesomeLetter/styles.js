@@ -30,4 +30,5 @@ export const Container = styled.span`
   animation-duration: 1s;
   animation-timing-function: ease-in;
   line-height: 1em;
+  backface-visibility: hidden;
 `;
