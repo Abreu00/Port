@@ -35,7 +35,7 @@ const projects = [
     ctas: [{ text: "View on github", link: "https://github.com/Abreu00" }]
   },
   {
-    img: images["viewer"],
+    img: images["app1"],
     type: 2,
     ctas: [{ text: "View on github", link: "https://github.com/Abreu00" }]
   }

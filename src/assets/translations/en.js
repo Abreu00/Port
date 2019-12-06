@@ -10,7 +10,7 @@ export default {
     {
       title: "My portfolio",
       desc: [
-        `My portfolio is the cool website you're looking at! Besides the interface, you can take a look at the code on Github as well since I have made this project open-source. I took some inspiration from Jonas shmedtmann advanced CSS course and my poor brain web portfolio.`,
+        `My portfolio is the cool website you're looking at! Besides the interface, you can take a look at the code on Github as well since I have made this project open-source. For the interface design, I took some inspiration from Jonas schmedtmann advanced CSS course and my poor brain web portfolio.`,
         `The translation functionality was implemented using React's context API which is great. However, I believe I should have used Redux in this project, not for the translations itself, but for managing the general state of the application.`
       ]
     },

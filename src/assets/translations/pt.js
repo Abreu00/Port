@@ -3,15 +3,15 @@ export default {
     {
       title: "Directa viewer",
       desc: [
-        `Directa Viewer consists of a Single-page application to display data, such as quality and performance, from machines of a given factory. It has several different screens ranging from information about one machine up to eight, of course, while the number of machines on the screen goes up the information displayed about each decrease, leaving the most relevant information.`,
-        `Some cool things about this project are that it was my first time using css-in-js with the Styled components library and also marked my transition from class-based components to React hooks.`
+        `O Directa Viewer é uma Single-Page application para mostrar dados, como qualidade e desempenho, sobre maquinas de uma dada fabrica. A aplicação consiste de diversos displays com informações sobre uma até oito maquinas e obviamente enquanto o numero de maquinas na tela vai aumentando o numero de informações sobre cada vai diminuindo, mantendo as informações mais relevantes.`,
+        `Alguns fatos interesantes sobre esse projeto é que foi minha primeira vez utilizando css-in-js com a biblioteca Styled componentes, além disso o projeto marcou minha transição de componentes de classes para React Hooks.`
       ]
     },
     {
       title: "Meu portfolio",
       desc: [
         `My portfolio is the cool website you're looking at! Besides the interface, you can take a look at the code on Github as well since I have made this project open-source.`,
-        `The translation functionality was implemented using React's context API which is great. However, I believe I should have used Redux in this project, not for the translations itself, but for managing the general state of the application.`
+        `A funcionalidade de tradução foi implementada usando a API de contexto do React, que é otima.Entretando, acredito que eu deveria ter utilizado Redux nesse projeto, não para as traduções em ci mas para gerenciar o estado geral da aplicação.`
       ]
     },
     {
