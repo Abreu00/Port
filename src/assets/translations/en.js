@@ -1,20 +1,16 @@
 export default {
   projects: [
     {
-      title: "Directa viewer",
-      desc: "Dashboard project for industrial data visualization"
+      title: "Directa viewer"
     },
     {
-      title: "This portfolio",
-      desc: "blalbalblalblalsals"
+      title: "My portfolio"
     },
     {
-      title: "Directa helpchain",
-      desc: "blalbalblalblalsals"
+      title: "Directa helpchain"
     },
     {
-      title: "Matermind app",
-      desc: "blalbalblalblalsals"
+      title: "Matermind app"
     }
   ],
   projectBtn: "View project",
@@ -28,7 +24,7 @@ export default {
     about: {
       title: "About me",
       text: [
-        `Hi! my name is Fábio de Abreu, I was born in Florianópolis/SC Brazil,
+        `Hi! My name is Fábio de Abreu, I was born in Florianópolis/SC Brazil,
       and I'm currently part of Directa Automação team, working with
       Front-end development. Nevertheless, also developing projects for
       myself and others.`,
@@ -40,7 +36,16 @@ export default {
       that helps people.`
       ]
     },
-    experience: { title: "Experience", text: [`Experience text`] }
+    experience: {
+      title: "Experience",
+      text: [
+        `My first-ever line of code was written in Ruby, although I never explored it much, 
+        the language I dove deeper into was Javascript working for the most part with Front-end.`,
+        `While working with Directa Automação, I have created web interfaces that help the 
+        Brazilian industrial sector, using vanilla JS and also facebook React library which has become 
+        my go-to tool for developing web sites like this one you are browsing.`
+      ]
+    }
   },
   footer: "2019 Developed by Fábio Oliveira de Abreu",
   copyMsg: "Copied"

@@ -1,20 +1,16 @@
 export default {
   projects: [
     {
-      title: "Directa viewer",
-      desc: "Painel para visualização de dados industriais"
+      title: "Directa viewer"
     },
     {
-      title: "Esse portfolio",
-      desc: "blalbalblalblalsals"
+      title: "Meu portfolio"
     },
     {
-      title: "Directa helpchain",
-      desc: "blalbalblalblalsals"
+      title: "Directa helpchain"
     },
     {
-      title: "Matermind app",
-      desc: "blalbalblalblalsals"
+      title: "Matermind app"
     }
   ],
   projectBtn: "Ver projeto",
@@ -28,19 +24,27 @@ export default {
     about: {
       title: "Sobre min",
       text: [
-        `Hi! my name is Fábio de Abreu, I was born in Florianópolis/SC Brazil,
-      and I'm currently part of Directa Automação team, working with
-      Front-end development. Nevertheless, also developing projects for
-      myself and others.`,
-        `My journey to learn programming started when I was 16 years old, it
-      felt like the natural thing to do for someone passionate about
-      technology. Later, I had some experience with formal education,
-      studying Computer Science at UFSC. However, I believe that the best
-      way to learn is through working on real projects and creating software
-      that helps people.`
+        `Ola! Meu nome é Fábio de Abreu, sou natural de Florianópolis/SC e 
+        hoje faço parte do time de desenvolvimento da empresa Directa Automação,
+        trabalhando com desenvolvimento web Front-end. Ainda assim, desenvolvendo
+        meus próprios projetos e para terceiros.`,
+        `Minha jornada apreendendo programação comeceu com 16 anos, parecia
+        um caminho natural para alguém apaixonado por tecnologia. Mais tarde, ganhei
+        experiência com educação formal, estudando Ciências da Computação na UFSC.
+        Apesar disso, eu acredito que o melhor jeito de apreender é trabalhando em
+        projetos reais e desenvolvendo software que pode realmente ajudar pessoas.`
       ]
     },
-    experience: { title: "Experiência", text: [`Experience text`] }
+    experience: {
+      title: "Experience",
+      text: [
+        `Escrevi minha primeira linha de código usando Ruby, apesar disso nunca o explorei muito e fui me
+        aprofundar mesmo na linguagem Javascript trabalhando, por grande parte, com Front-end.`,
+        `Trabalhando na Directa Automação, desenvolvi interfaces web que ajudam o setor industrial
+        brasileiro, usando Javascript vanilla e também a biblioteca do facebook React que se tornou
+        minha principal ferramenta para desenvolvimento de websites como esse que você está navegando.`
+      ]
+    }
   },
   footer: "2019 Desenvolvido por Fábio Oliveira de Abreu",
   copyMsg: "Copiado"
