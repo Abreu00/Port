@@ -50,6 +50,7 @@ export const Image = styled.img`
   @media (max-width: ${media.width.tablet.portrait}) {
     width: 11rem;
     height: 11rem;
+    box-shadow: 0 0 0 0.75rem rgba(0, 92, 151, 1);
   }
 
   @media (max-width: ${media.width.phone}) {
