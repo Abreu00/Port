@@ -1,16 +1,26 @@
 export default {
   projects: [
     {
-      title: "Directa viewer"
+      title: "Directa viewer",
+      desc: [
+        `Directa Viewer consists of a Single-page application to display data, such as quality and performance, from machines of a given factory. It has several different screens ranging from information about one machine up to eight, of course, while the number of machines on the screen goes up the information displayed about each decrease, leaving the most relevant information.`,
+        `Some cool things about this project are that it was my first time using css-in-js with the Styled components library and also marked my transition from class-based components to React hooks.`
+      ]
     },
     {
-      title: "Meu portfolio"
+      title: "Meu portfolio",
+      desc: [
+        `My portfolio is the cool website you're looking at! Besides the interface, you can take a look at the code on Github as well since I have made this project open-source.`,
+        `The translation functionality was implemented using React's context API which is great. However, I believe I should have used Redux in this project, not for the translations itself, but for managing the general state of the application.`
+      ]
     },
     {
-      title: "Directa helpchain"
+      title: "Directa helpchain",
+      desc: []
     },
     {
-      title: "Matermind app"
+      title: "Matermind app",
+      desc: []
     }
   ],
   projectBtn: "Ver projeto",

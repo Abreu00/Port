@@ -62,22 +62,9 @@ export default function Project({ match }) {
             onLoad={handleImageLoad}
             src={img}
           />
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-            veritatis dignissimos sint nisi magni! Praesentium repellendus
-            perferendis accusantium quisquam. Ea iure hic ex, quos sit inventore
-            optio. Voluptatem, iste deleniti! Lorem ipsum dolor, sit amet
-            consectetur adipisicing elit. Incidunt veritatis dignissimos sint
-            nisi magni! Praesentium repellendus perferendis accusantium
-            quisquam. Ea iure hic ex, quos sit inventore optio. Voluptatem, iste
-            deleniti! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Incidunt veritatis dignissimos sint nisi magni! Praesentium
-            repellendus perferendis accusantium quisquam. Ea iure hic ex, quos
-            sit inventore optio. Voluptatem, iste deleniti! Lorem ipsum dolor,
-            sit amet consectetur adipisicing elit. Incidunt veritatis
-            dignissimos sint nisi magni! Praesentium repellendus perferendis
-            accusantium quisquam. Ea iure hic ex, quos sit inventore optio
-          </p>
+          {context.translation.projects[projectNumber].desc.map((text, i) => (
+            <p key={i}>{text}</p>
+          ))}
         </ClearFix>
       </Container>
     </Layout>

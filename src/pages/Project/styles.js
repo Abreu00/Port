@@ -7,6 +7,10 @@ export const Container = styled.div`
   font-size: 1.8rem;
   text-align: justify;
 
+  p:not(:last-child) {
+    margin-bottom: 1em;
+  }
+
   @media (max-width: ${mediaQuery.width.pc.smaller}) {
     padding: 0 2rem;
   }
