@@ -20,7 +20,9 @@ export default function Header({
       <Container>
         <Heading>
           {header.split("").map((letter, index) => (
-            <AwesomeLetter key={index}>{letter}</AwesomeLetter>
+            <AwesomeLetter initial delay={(index + 1) * 0.4} key={index}>
+              {letter}
+            </AwesomeLetter>
           ))}
         </Heading>
         <div>

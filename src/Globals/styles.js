@@ -25,17 +25,13 @@ export default createGlobalStyle`
     font-family: 'Lato', sans-serif;
     color: ${props => props.theme.font.color};
     background: ${props => props.theme.color.primary};
+    overflow-x: hidden;
   }
 
   a {
     color: inherit;
   }
 
-  @media (max-width: ${mediaQueries.width.pc.smaller}) {
-    body {
-      overflow-x: hidden;
-    }
-  }
 
   @media (max-width: ${mediaQueries.width.phone}) {
     /* 600px */

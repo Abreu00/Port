@@ -2,24 +2,30 @@ import React, { useState } from "react";
 import { Container } from "./styles";
 import PropTypes from "prop-types";
 
-export default function AwesomeLetter({ children, initial }) {
-  const [animated, setAnimated] = useState(false);
+export default function AwesomeLetter({ children, initial, delay }) {
+  const [animation, setAnimation] = useState({
+    running: initial,
+    delay: delay,
+    opacity: initial ? 0 : 1
+  });
 
   function handleMouseOver() {
-    if (!animated) {
-      setAnimated(true);
+    if (!animation.running) {
+      setAnimation({ ...animation, running: true });
     }
   }
 
   function handleAnimationEnd() {
-    setAnimated(false);
+    setAnimation({ running: false, delay: 0, opacity: 1 });
   }
 
   return (
     <Container
       onMouseOver={handleMouseOver}
       onAnimationEnd={handleAnimationEnd}
-      running={animated}
+      running={animation.running}
+      delay={animation.delay}
+      style={{ opacity: animation.opacity }}
     >
       {children}
     </Container>
@@ -28,5 +34,11 @@ export default function AwesomeLetter({ children, initial }) {
 
 AwesomeLetter.propTypes = {
   children: PropTypes.string.isRequired,
-  initial: PropTypes.bool
+  initial: PropTypes.bool,
+  delay: PropTypes.number
+};
+
+AwesomeLetter.defaultProps = {
+  delay: 0,
+  initial: false
 };
