@@ -1,0 +1,33 @@
+import React, { useContext } from "react";
+import {
+  Container,
+  ShadowProvider,
+  Image,
+  Textarea,
+  ButtonWrapper
+} from "./styles";
+import Button from "../Button";
+import { Context } from "../../context";
+import Link from "next/link";
+
+export default function Project(props) {
+  const context = useContext(Context);
+
+  return (
+    <ShadowProvider>
+      <Container image={props.img}>
+        <div>
+          <Image src={props.img}></Image>
+          <Textarea>{props.title}</Textarea>
+        </div>
+        <ButtonWrapper>
+          <Button danger={props.isExpanded}>
+            <Link href={`/projects/${props.index + 1}`}>
+              {context.translation.projectBtn}
+            </Link>
+          </Button>
+        </ButtonWrapper>
+      </Container>
+    </ShadowProvider>
+  );
+}

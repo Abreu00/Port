@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport { Item } from \"./styles\";\nexport default function ToggleItem(props) {\n  return __jsx(Item, {\n    selected: props.selected,\n    onClick: props.onClick\n  }, props.children);\n}","map":null,"metadata":{},"sourceType":"module"}

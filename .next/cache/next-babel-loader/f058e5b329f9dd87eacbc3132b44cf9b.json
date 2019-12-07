@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport TextPage from \"../layouts/TextPage\";\nexport default function About() {\n  return __jsx(TextPage, {\n    name: \"experience\"\n  });\n}","map":null,"metadata":{},"sourceType":"module"}

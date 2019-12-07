@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from \"styled-components\";\nexport const Container = styled.footer`\n  width: 100%;\n  padding: 1rem 0;\n  font-size: 1.6rem;\n  text-align: center;\n`;","map":null,"metadata":{},"sourceType":"module"}

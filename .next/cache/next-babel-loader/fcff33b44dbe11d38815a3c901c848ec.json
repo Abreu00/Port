@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from \"styled-components\";\nexport const Wrapper = styled.div`\n  & {\n    height: auto;\n    width: auto;\n    padding: 0.25rem;\n    background: transparent;\n    cursor: pointer;\n    transition: color 0.4s;\n  }\n\n  &:hover {\n    color: ${props => props.theme.font.colorBold};\n  }\n`;","map":null,"metadata":{},"sourceType":"module"}

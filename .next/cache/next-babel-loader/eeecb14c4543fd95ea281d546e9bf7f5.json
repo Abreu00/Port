@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport { Btn } from \"./styles\";\nexport default function Button(props) {\n  return __jsx(Btn, {\n    onClick: props.onClick\n  }, props.children);\n}","map":null,"metadata":{},"sourceType":"module"}

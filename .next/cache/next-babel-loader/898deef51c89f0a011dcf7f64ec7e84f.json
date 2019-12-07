@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default {\n  width: {\n    pc: {\n      smaller: \"40em\",\n      small: \"53.125em\"\n    },\n    phone: \"37.5em\",\n    tablet: {\n      portrait: \"56.25em\",\n      landscape: \"75em\"\n    },\n    large: \"112.5em\"\n  }\n};","map":null,"metadata":{},"sourceType":"module"}

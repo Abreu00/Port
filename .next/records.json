@@ -1,0 +1,47 @@
+{
+  "modules": {
+    "byIdentifier": {},
+    "usedIds": {}
+  },
+  "chunks": {
+    "byName": {
+      "static/runtime/webpack.js": 0,
+      "commons": 1,
+      "static/8ckxvuPgApLJnPT-HqY9j/pages/_app.js": 2,
+      "static/8ckxvuPgApLJnPT-HqY9j/pages/_error.js": 3,
+      "static/8ckxvuPgApLJnPT-HqY9j/pages/about.js": 4,
+      "static/8ckxvuPgApLJnPT-HqY9j/pages/experience.js": 5,
+      "static/8ckxvuPgApLJnPT-HqY9j/pages/index.js": 6,
+      "static/8ckxvuPgApLJnPT-HqY9j/pages/index/styles.js": 7,
+      "static/8ckxvuPgApLJnPT-HqY9j/pages/projects/[id].js": 8,
+      "static/8ckxvuPgApLJnPT-HqY9j/pages/projects/styles.js": 9,
+      "static/runtime/main.js": 10,
+      "static/runtime/polyfills.js": 11,
+      "static/AfKmLNbsO4hUOH8e9xitw/pages/_app.js": 12,
+      "static/AfKmLNbsO4hUOH8e9xitw/pages/_error.js": 13,
+      "static/AfKmLNbsO4hUOH8e9xitw/pages/about.js": 14,
+      "static/AfKmLNbsO4hUOH8e9xitw/pages/experience.js": 15,
+      "static/AfKmLNbsO4hUOH8e9xitw/pages/index.js": 16,
+      "static/AfKmLNbsO4hUOH8e9xitw/pages/projects/[id].js": 17,
+      "static/U01MMRa-D5wiSt4hGjYwY/pages/_app.js": 2,
+      "static/U01MMRa-D5wiSt4hGjYwY/pages/_error.js": 3,
+      "static/U01MMRa-D5wiSt4hGjYwY/pages/about.js": 4,
+      "static/U01MMRa-D5wiSt4hGjYwY/pages/experience.js": 5,
+      "static/U01MMRa-D5wiSt4hGjYwY/pages/index.js": 6,
+      "static/U01MMRa-D5wiSt4hGjYwY/pages/projects/[id].js": 7
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      10,
+      11,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+}
