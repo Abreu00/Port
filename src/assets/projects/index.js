@@ -30,7 +30,7 @@ const projects = [
     ctas: [
       {
         text: "View on github",
-        link: "https://github.com/Abreu00",
+        link: "https://github.com/Abreu00/Port/",
         disabled: false
       }
     ]
@@ -46,7 +46,7 @@ const projects = [
     ctas: [
       {
         text: "View on github",
-        link: "https://github.com/Abreu00",
+        link: "https://github.com/Abreu00/MM",
         disabled: false
       }
     ]

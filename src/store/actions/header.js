@@ -5,12 +5,6 @@ export function selectProjects(selected) {
   };
 }
 
-export function toggleHeadingAnimation() {
-  return {
-    type: "TOOGLE_ANIMATION"
-  };
-}
-
 export function updateHeaderWithPage(navToHide, showProjectSelector = false) {
   return {
     type: "PAGE_CHANGE",

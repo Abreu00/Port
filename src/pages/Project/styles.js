@@ -11,7 +11,7 @@ export const Container = styled.div`
     margin-bottom: 1em;
   }
 
-  @media (max-width: ${mediaQuery.width.pc.smaller}) {
+  @media (max-width: ${mediaQuery.width.tablet.small}) {
     padding: 0 2rem;
   }
 `;
@@ -22,7 +22,7 @@ export const Row = styled.div`
   align-items: center;
   margin-bottom: 5rem;
 
-  @media (max-width: ${mediaQuery.width.pc.smaller}) {
+  @media (max-width: ${mediaQuery.width.tablet.small}) {
     flex-direction: column;
 
     > :last-child {
@@ -38,7 +38,7 @@ export const Title = styled.h1`
   font-weight: bold;
   color: ${props => props.theme.font.colorBold};
 
-  @media (max-width: ${mediaQuery.width.pc.smaller}) {
+  @media (max-width: ${mediaQuery.width.tablet.small}) {
     & {
       text-align: center;
       padding-left: 2rem;
@@ -46,13 +46,13 @@ export const Title = styled.h1`
   }
 `;
 
-const imageAnimation = keyframes`
+const imageAnimation = scaleEnd => keyframes`
   from {
     transform: rotate(360deg) scale(0);
     opacity: 0;
   }
   to {
-    transform: rotate(0deg) scale(0.9);
+    transform: rotate(0deg) scale(${scaleEnd});
     opacity: 1;
   }
 `;
@@ -70,15 +70,15 @@ export const Image = styled.img`
   border-radius: 0.5rem;
   transition: transform 0.5s, box-shadow 0.5s;
   user-select: none;
-  animation: ${imageAnimation} 1s ease;
+  animation: ${imageAnimation(0.9)} 1s ease;
   &:hover {
     transform: scale(1);
     box-shadow: 0 1rem 1.25rem 0 rgba(33, 33, 33, 0.25), 0 0 0 1rem transparent;
   }
 
-  @media (max-width: ${mediaQuery.width.pc.smaller}) {
+  @media (max-width: ${mediaQuery.width.tablet.small}) {
     & {
-      animation: none;
+      animation: ${imageAnimation(1)} 1s ease;
       height: auto;
       width: 100vw;
       max-width: 100vw;

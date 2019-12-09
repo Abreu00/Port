@@ -19,23 +19,23 @@ function Main({ selectedProject, hideNavItem }) {
     );
   }
 
-  function mapProjects() {
-    return context.translation.projects.map(
-      (project, i) =>
-        selectCondition(i) && (
-          <Project
-            index={i}
-            key={i}
-            title={project.title}
-            img={projects[i].img}
-          >
-            {project.desc}
-          </Project>
-        )
-    );
-  }
-
-  return <ProjectsContainer>{mapProjects()}</ProjectsContainer>;
+  return (
+    <ProjectsContainer>
+      {context.translation.projects.map(
+        (project, i) =>
+          selectCondition(i) && (
+            <Project
+              index={i}
+              key={i}
+              title={project.title}
+              img={projects[i].img}
+            >
+              {project.desc}
+            </Project>
+          )
+      )}
+    </ProjectsContainer>
+  );
 }
 
 const mapStateToProps = state => ({

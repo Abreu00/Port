@@ -1,11 +1,8 @@
 export default {
   width: {
-    pc: {
-      smaller: "40em",
-      small: "53.125em"
-    },
     phone: "37.5em",
     tablet: {
+      small: "40em",
       portrait: "56.25em",
       landscape: "75em"
     },

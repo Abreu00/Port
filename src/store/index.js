@@ -9,33 +9,33 @@ const INITIAL_STATE = {
   }
 };
 
-//reducer
-function header(state = INITIAL_STATE, action) {
-  if (action.type === "SELECT_PROJECTS") {
-    return {
-      ...state,
-      projectSelector: {
-        ...state.projectSelector,
-        selected: action.selected
-      }
-    };
-  } else if (action.type === "TOOGLE_ANIMATION") {
-    return {
-      ...state,
-      animateHeading: !state.animateHeading
-    };
-  } else if (action.type === "PAGE_CHANGE") {
-    return {
-      ...state,
-      hiddenNav: action.navToHide,
-      projectSelector: {
-        ...state.projectSelector,
-        isVisible: action.showProjectSelector
-      }
-    };
-  }
-
-  return state;
+function selectProjects(state, action) {
+  return {
+    ...state,
+    projectSelector: {
+      ...state.projectSelector,
+      selected: action.selected
+    }
+  };
 }
+
+function pageChange(state, action) {
+  return {
+    ...state,
+    hiddenNav: action.navToHide,
+    projectSelector: {
+      ...state.projectSelector,
+      isVisible: action.showProjectSelector
+    }
+  };
+}
+
+const reducers = {
+  PAGE_CHANGE: pageChange,
+  SELECT_PROJECTS: selectProjects
+};
+
+const header = (state = INITIAL_STATE, action) =>
+  reducers[action.type] ? reducers[action.type](state, action) : state;
 
 export default createStore(header);

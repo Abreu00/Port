@@ -31,6 +31,7 @@ export const Container = styled.div`
       padding: 3rem;
       background-image: url(${props => props.image});
       background-size: cover;
+      animation: none;
     }
 
     & > :first-child {
