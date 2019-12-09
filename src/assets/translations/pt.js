@@ -27,7 +27,7 @@ export default {
   header: {
     home: "Home",
     about: "Sobre mim",
-    xp: "Experiencia",
+    experience: "Experiencia",
     all: "Todos"
   },
   textPages: {

@@ -1,38 +1,23 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import Header from "../../components/Header";
 import Project from "../../components/Project";
 import { ProjectsContainer } from "./styles";
 import { Context } from "../../context";
 import Layout from "../../layouts/";
 import projects from "../../assets/projects";
+import { connect } from "react-redux";
 
-export default function Main() {
+function Main({ selectedProject, hideNavItem }) {
   const context = useContext(Context);
-  // 0 for all projects, 1 for web and two for mobile
-  const [selector, setSelector] = useState(0);
-  const [expansion, setExpansion] = useState({
-    current: -1,
-    prev: -1
-  });
 
   useEffect(() => {
     document.title = context.translation.header.home + " | Fábio de Abreu";
   }, [context.translation]);
 
-  function handleExpansionGen(key) {
-    return () =>
-      expansion.current === key
-        ? setExpansion({ prev: expansion.current, current: -1 })
-        : setExpansion({ prev: expansion.current, current: key });
-  }
-
   function selectCondition(projectIndex) {
-    return selector === 0 || selector === projects[projectIndex].type;
-  }
-
-  function handleSelection(itemId) {
-    /* Handles click for toogle item on header*/
-    return () => setSelector(itemId);
+    return (
+      selectedProject === 0 || selectedProject === projects[projectIndex].type
+    );
   }
 
   function mapProjects() {
@@ -40,9 +25,6 @@ export default function Main() {
       (project, i) =>
         selectCondition(i) && (
           <Project
-            onClick={handleExpansionGen(i)}
-            isExpanded={expansion.current === i}
-            isPrev={expansion.prev === i}
             index={i}
             key={i}
             title={project.title}
@@ -56,15 +38,14 @@ export default function Main() {
 
   return (
     <Layout>
-      <Header
-        showSelection
-        selected={selector}
-        handleSelection={handleSelection}
-        hideNav={1}
-      ></Header>
-      <ProjectsContainer expanded={expansion}>
-        {mapProjects()}
-      </ProjectsContainer>
+      <Header showSelection hideNav={1}></Header>
+      <ProjectsContainer>{mapProjects()}</ProjectsContainer>
     </Layout>
   );
 }
+
+const mapStateToProps = state => ({
+  selectedProject: state.projectSelector.selected
+});
+
+export default connect(mapStateToProps)(Main);
