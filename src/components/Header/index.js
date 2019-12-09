@@ -14,18 +14,13 @@ function Header({ hiddenNav, selectProjects, projectSelector }) {
   const context = useContext(Context);
   const toggleList = [context.translation.header.all, "Web", "Mobile"];
   const links = ["home", "about", "experience"];
-  const animateHeading = projectSelector.isVisible; //Indicates if we are on home link
 
   return (
     <>
       <Container>
         <Heading>
           {header.split("").map((letter, index) => (
-            <AwesomeLetter
-              initial={animateHeading}
-              delay={(index + 1) * 0.4}
-              key={index}
-            >
+            <AwesomeLetter initial={true} delay={(index + 1) * 0.4} key={index}>
               {letter}
             </AwesomeLetter>
           ))}

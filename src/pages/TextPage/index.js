@@ -1,5 +1,4 @@
 import React, { useEffect, useContext } from "react";
-import Header from "../../components/Header";
 import Layout from "../../layouts/";
 import { TextContainer } from "./styles";
 import { Context } from "../../context";
@@ -15,7 +14,6 @@ export default function TextPage({ name }) {
 
   return (
     <Layout>
-      <Header hideNav={name === "about" ? 2 : 3} />
       <TextContainer>
         <h1>{page.title}</h1>
         {page.text.map((paragraph, i) => (

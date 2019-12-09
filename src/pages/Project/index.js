@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
 import Layout from "../../layouts";
-import Header from "../../components/Header";
 import ClearFix from "../../components/ClearFix";
 import Cta from "../../components/Cta";
 import { Context } from "../../context";
@@ -42,7 +41,6 @@ export default function Project({ match }) {
   return (
     <Layout>
       <Container>
-        <Header />
         <Row>
           <Title>{context.translation.projects[projectNumber].title}</Title>
           <div>

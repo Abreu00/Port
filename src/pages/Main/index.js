@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react";
-import Header from "../../components/Header";
 import Project from "../../components/Project";
 import { ProjectsContainer } from "./styles";
 import { Context } from "../../context";
@@ -38,7 +37,6 @@ function Main({ selectedProject, hideNavItem }) {
 
   return (
     <Layout>
-      <Header showSelection hideNav={1}></Header>
       <ProjectsContainer>{mapProjects()}</ProjectsContainer>
     </Layout>
   );

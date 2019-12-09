@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import theme from "../../Globals/theme";
 import mediaQuery from "../../Globals/mediaQueries";
 
@@ -13,6 +13,17 @@ export const Container = styled.div`
 
   @media (max-width: ${mediaQuery.width.pc.smaller}) {
     padding: 0 2rem;
+  }
+`;
+
+const imageAnimation = keyframes`
+  from {
+    transform: rotate(360deg) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) scale(.9);
+    opacity: 1;
   }
 `;
 
@@ -61,6 +72,7 @@ export const Image = styled.img`
   border-radius: 0.5rem;
   transition: transform 0.5s, box-shadow 0.5s;
   user-select: none;
+  animation: ${imageAnimation} 1s ease;
   &:hover {
     transform: scale(1);
     box-shadow: 0 1rem 1.25rem 0 rgba(33, 33, 33, 0.25), 0 0 0 1rem transparent;
