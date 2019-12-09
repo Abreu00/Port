@@ -91,6 +91,8 @@ export const ButtonWrapper = styled.div`
     display: inline-block;
     height: 100%;
     padding: 0.1em 1em 0 1em;
+    height: 100%;
+    padding: 0.5rem 2rem;
   }
 
   @media (max-width: ${media.width.phone}) {

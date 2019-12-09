@@ -10,29 +10,35 @@ export default {
     {
       title: "Meu portfolio",
       desc: [
-        `My portfolio is the cool website you're looking at! Besides the interface, you can take a look at the code on Github as well since I have made this project open-source.`,
-        `A funcionalidade de tradução foi implementada usando a API de contexto do React, que é otima.Entretando, acredito que eu deveria ter utilizado Redux nesse projeto, não para as traduções em ci mas para gerenciar o estado geral da aplicação.`
+        `Meu Portfolio é esse site massa que você está olhando! Além da interface, o código também está livre para ser visualido no Github.Peguei alguma inspiração do curso avançado de CSS do Jonas Schmedtmann e também do web portfolio my poor brain.`,
+        `O núcleo desse projeto foi feito em cima das bibliotecas React e styled components. Além disso, a funcionalidade de tradução foi criada através da API de contexto do React enquanto Redux foi usado para integrar o estado do component Header com as paginas do projeto`
       ]
     },
     {
       title: "Directa helpchain",
-      desc: []
+      desc: [
+        `Directa Helpchain é versão web para o sistema de ciclo de ajuda da Directa Automação, existe também uma versão mobile. O projeto melhora o gerenciamento de problemas recorrentes que podem acontecer de tempos em tempos em uma fabrica. Nesse sentido, Esses problemas podem ser classificados em três categorias, pendentes, em resolução, e concluidos.`,
+        `Por fim, vale mecionar que o projeto foi criado puramente com HTML/CSS/JS.`
+      ]
     },
     {
       title: "Matermind app",
-      desc: []
+      desc: [
+        `O Mastermind App é uma aplicação mobile que eu criei por duas razões, apreender sobre a SDK do Google Flutter e a também facilitar a vida, minha e de alguns amigos com um app que te pemite organizar respostas para uma série de perguntas diárias, para te ajudar a avaliar o quão produtivo foi seu dia.`,
+        `Eu o desenvolvi usando um tema escuro, para tomar cuidado com os olhos pois sei que o app será utilizado na maior parte das vezes durante a noite.`
+      ]
     }
   ],
   projectBtn: "Ver projeto",
   header: {
     home: "Home",
     about: "Sobre mim",
-    experience: "Experiencia",
+    experience: "Experiência",
     all: "Todos"
   },
   textPages: {
     about: {
-      title: "Sobre min",
+      title: "Sobre mim",
       text: [
         `Ola! Meu nome é Fábio de Abreu, sou natural de Florianópolis/SC e 
         hoje faço parte do time de desenvolvimento da empresa Directa Automação,
@@ -46,7 +52,7 @@ export default {
       ]
     },
     experience: {
-      title: "Experience",
+      title: "Experiência",
       text: [
         `Escrevi minha primeira linha de código usando Ruby, apesar disso nunca o explorei muito e fui me
         aprofundar mesmo na linguagem Javascript trabalhando, por grande parte, com Front-end.`,

@@ -10,17 +10,24 @@ export default {
     {
       title: "My portfolio",
       desc: [
-        `My portfolio is the cool website you're looking at! Besides the interface, you can take a look at the code on Github as well since I have made this project open-source. For the interface design, I took some inspiration from Jonas schmedtmann advanced CSS course and my poor brain web portfolio.`,
-        `The translation functionality was implemented using React's context API which is great. However, I believe I should have used Redux in this project, not for the translations itself, but for managing the general state of the application.`
+        `My portfolio is the cool website you're looking at! Besides the interface, you can look at the code on Github as well since I have made this project open-source. I took some inspiration from Jonas Schmedtmann's advanced CSS course and my poor brain web portfolio.`,
+        `The core of the project was built on top of React and styled-components libraries. Besides that, the translation functionality was implemented using React great context API while Redux was used to integrate the Header state with the pages.`
       ]
     },
     {
       title: "Directa helpchain",
-      desc: []
+      desc: [
+        `Directa Helpchain is the web version for the Directa Automação help chain system, there is also a mobile version. Furthermore, it improves the managing process for recurrent problems that can happen from time to time in a factory. In that sense. In that sense, those problems can be classified into three categories, in need of help, in resolution and fixed.`,
+        `In addition to that, it's worth mentioning that this interface was built with pure HTML/CSS/JS.`
+      ]
     },
     {
       title: "Matermind app",
-      desc: []
+      desc: [
+        `Mastermind App is a mobile app I have created for two reasons, learn about Google's flutter SDK and also to help me and group of friends, the app lets you keep track of a set of daily questions should answer to see how productive you have been on a given day.`,
+        `
+        I have developed it using a dark theme, to make it easier on the eyes, since it's going to be mostly used during the night.`
+      ]
     }
   ],
   projectBtn: "View project",

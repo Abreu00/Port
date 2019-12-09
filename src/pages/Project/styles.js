@@ -16,17 +16,6 @@ export const Container = styled.div`
   }
 `;
 
-const imageAnimation = keyframes`
-  from {
-    transform: rotate(360deg) scale(0);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(0deg) scale(.9);
-    opacity: 1;
-  }
-`;
-
 export const Row = styled.div`
   display: flex;
   justify-content: space-between;
@@ -59,6 +48,17 @@ export const Title = styled.h1`
   }
 `;
 
+const imageAnimation = keyframes`
+  from {
+    transform: rotate(360deg) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) scale(0.9);
+    opacity: 1;
+  }
+`;
+
 export const Image = styled.img`
   width: ${props => props.width};
   height: ${props => props.height};
@@ -80,11 +80,13 @@ export const Image = styled.img`
 
   @media (max-width: ${mediaQuery.width.pc.smaller}) {
     & {
+      animation: none;
       height: auto;
       width: 100vw;
       max-width: 100vw;
       margin: 0 calc(-50vw + 50%);
       margin-bottom: 2rem;
+      max-height: 50vh;
       transform: scale(1);
       object-fit: cover;
       object-position: top;
