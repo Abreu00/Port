@@ -6,7 +6,7 @@ export const ShadowProvider = styled.div`
 `;
 
 export const Container = styled.div`
-  background: #eee;
+  background: ${props => props.theme.color.secondary};
   color: ${props => props.theme.font.colorBold};
   min-height: 25rem;
   height: auto;
@@ -46,6 +46,8 @@ export const Image = styled.img`
   box-shadow: 0 0 0 1.25rem rgba(0, 92, 151, 1);
   transition: transform 0.4s;
   user-select: none;
+  object-fit: cover;
+  object-position: top left;
 
   @media (max-width: ${media.width.tablet.portrait}) {
     width: 11rem;

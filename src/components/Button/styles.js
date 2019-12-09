@@ -39,7 +39,7 @@ export const Btn = styled.div`
   }
 
   &:hover::after {
-    animation: ${hoverAnimation} 0.4s ease;
+    animation: ${hoverAnimation} 0.4s ease 80ms;
   }
 
   @media (max-width: ${media.width.phone}) {

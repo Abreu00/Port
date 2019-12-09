@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import Project from "../../components/Project";
 import { ProjectsContainer } from "./styles";
 import { Context } from "../../context";
-import Layout from "../../layouts/";
+
 import projects from "../../assets/projects";
 import { connect } from "react-redux";
 
@@ -35,11 +35,7 @@ function Main({ selectedProject, hideNavItem }) {
     );
   }
 
-  return (
-    <Layout>
-      <ProjectsContainer>{mapProjects()}</ProjectsContainer>
-    </Layout>
-  );
+  return <ProjectsContainer>{mapProjects()}</ProjectsContainer>;
 }
 
 const mapStateToProps = state => ({

@@ -20,15 +20,13 @@ export const Row = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 
   @media (max-width: ${mediaQuery.width.pc.smaller}) {
     flex-direction: column;
 
     > :last-child {
-      bottom: 15%;
-      transform: translateY(-50%);
-      position: fixed;
+      display: none;
     }
   }
 `;
@@ -85,7 +83,7 @@ export const Image = styled.img`
       width: 100vw;
       max-width: 100vw;
       margin: 0 calc(-50vw + 50%);
-      margin-bottom: 2rem;
+      margin-bottom: 3.2rem;
       max-height: 50vh;
       transform: scale(1);
       object-fit: cover;

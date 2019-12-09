@@ -22,22 +22,34 @@ const projects = [
   {
     img: images["viewer"],
     type: 1,
-    ctas: [{ text: "View on github", link: "https://github.com/Abreu00" }]
+    ctas: [{ text: "Closed Source", link: "", disabled: true }]
   },
   {
     img: images["port"],
     type: 1,
-    ctas: [{ text: "View on github", link: "https://github.com/Abreu00" }]
+    ctas: [
+      {
+        text: "View on github",
+        link: "https://github.com/Abreu00",
+        disabled: false
+      }
+    ]
   },
   {
     img: images["helpchain"],
     type: 1,
-    ctas: [{ text: "View on github", link: "https://github.com/Abreu00" }]
+    ctas: [{ text: "Closed Source", link: "", disabled: false }]
   },
   {
     img: images["app"],
     type: 2,
-    ctas: [{ text: "View on github", link: "https://github.com/Abreu00" }]
+    ctas: [
+      {
+        text: "View on github",
+        link: "https://github.com/Abreu00",
+        disabled: false
+      }
+    ]
   }
 ];
 

@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "./styles";
 import Footer from "../components/Footer";
 import Sidebar from "../components/Sidebar";
-import PageMountAnimation from "../components/PageMountAnimation";
 import Header from "../components/Header";
 
 export default function MainLayout({ children }) {
@@ -12,7 +11,7 @@ export default function MainLayout({ children }) {
         <Sidebar />
         <div>
           <Header></Header>
-          <PageMountAnimation>{children}</PageMountAnimation>
+          {children}
         </div>
       </Container>
       <Footer />

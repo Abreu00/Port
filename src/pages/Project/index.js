@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from "react";
-import Layout from "../../layouts";
 import ClearFix from "../../components/ClearFix";
 import Cta from "../../components/Cta";
 import { Context } from "../../context";
@@ -39,32 +38,30 @@ export default function Project({ match }) {
   }
 
   return (
-    <Layout>
-      <Container>
-        <Row>
-          <Title>{context.translation.projects[projectNumber].title}</Title>
-          <div>
-            {project.ctas.map((cta, index) => (
-              <Cta key={index} link={cta.link}>
-                {cta.text}
-              </Cta>
-            ))}
-          </div>
-        </Row>
-        <ClearFix>
-          <Image
-            width={imgState.width}
-            height={imgState.height}
-            minHeight={imgState.minHeight}
-            minWidth={imgState.minWidth}
-            onLoad={handleImageLoad}
-            src={img}
-          />
-          {context.translation.projects[projectNumber].desc.map((text, i) => (
-            <p key={i}>{text}</p>
+    <Container>
+      <Row>
+        <Title>{context.translation.projects[projectNumber].title}</Title>
+        <div>
+          {project.ctas.map((cta, index) => (
+            <Cta key={index} link={cta.link} disabled={cta.disabled}>
+              {cta.text}
+            </Cta>
           ))}
-        </ClearFix>
-      </Container>
-    </Layout>
+        </div>
+      </Row>
+      <ClearFix>
+        <Image
+          width={imgState.width}
+          height={imgState.height}
+          minHeight={imgState.minHeight}
+          minWidth={imgState.minWidth}
+          onLoad={handleImageLoad}
+          src={img}
+        />
+        {context.translation.projects[projectNumber].desc.map((text, i) => (
+          <p key={i}>{text}</p>
+        ))}
+      </ClearFix>
+    </Container>
   );
 }
