@@ -38,7 +38,7 @@ const projects = [
   {
     img: images["helpchain"],
     type: 1,
-    ctas: [{ text: "Closed Source", link: "", disabled: false }]
+    ctas: [{ text: "Closed Source", link: "", disabled: true }]
   },
   {
     img: images["app"],
