@@ -22,7 +22,7 @@ export default {
       ]
     },
     {
-      title: "Matermind app",
+      title: "Mastermind app",
       desc: [
         `O Mastermind App é uma aplicação mobile que eu criei por duas razões, apreender sobre a SDK do Google Flutter e a também facilitar a vida, minha e de alguns amigos com um app que te pemite organizar respostas para uma série de perguntas diárias, para te ajudar a avaliar o quão produtivo foi seu dia.`,
         `Eu o desenvolvi usando um tema escuro, para tomar cuidado com os olhos pois sei que o app será utilizado na maior parte das vezes durante a noite.`

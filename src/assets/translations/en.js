@@ -22,7 +22,7 @@ export default {
       ]
     },
     {
-      title: "Matermind app",
+      title: "Mastermind app",
       desc: [
         `Mastermind App is a mobile app I have created for two reasons, learn about Google's flutter SDK and also to help me and group of friends, the app lets you keep track of a set of daily questions should answer to see how productive you have been on a given day.`,
         `
