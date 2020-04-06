@@ -2,7 +2,7 @@ function importAll(r) {
   r.keys().map(r);
   const filePaths = r.keys().map(r);
   const images = {};
-  filePaths.forEach(path => {
+  filePaths.forEach((path) => {
     const fileName = path.split("/")[3].split(".")[0];
     images[fileName] = path;
   });
@@ -22,7 +22,7 @@ const projects = [
   {
     img: images["viewer"],
     type: 1,
-    ctas: [{ text: "Closed Source", link: "", disabled: true }]
+    ctas: [{ text: "Closed Source", link: "", disabled: true }],
   },
   {
     img: images["port"],
@@ -31,14 +31,36 @@ const projects = [
       {
         text: "View on github",
         link: "https://github.com/Abreu00/Port/",
-        disabled: false
-      }
-    ]
+        disabled: false,
+      },
+    ],
+  },
+  {
+    img: images["seq"],
+    type: 1,
+    ctas: [
+      {
+        text: "Closed Source",
+        disabled: true,
+        link: "",
+      },
+    ],
   },
   {
     img: images["helpchain"],
     type: 1,
-    ctas: [{ text: "Closed Source", link: "", disabled: true }]
+    ctas: [{ text: "Closed Source", link: "", disabled: true }],
+  },
+  {
+    img: images["fkw"],
+    type: 2,
+    ctas: [
+      {
+        text: "View on github",
+        link: "https://github.com/Abreu00/App-de-Carteira",
+        disabled: false,
+      },
+    ],
   },
   {
     img: images["app"],
@@ -47,10 +69,10 @@ const projects = [
       {
         text: "View on github",
         link: "https://github.com/Abreu00/MM",
-        disabled: false
-      }
-    ]
-  }
+        disabled: false,
+      },
+    ],
+  },
 ];
 
 export default projects;

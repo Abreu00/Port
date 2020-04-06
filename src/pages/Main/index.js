@@ -38,8 +38,8 @@ function Main({ selectedProject, hideNavItem }) {
   );
 }
 
-const mapStateToProps = state => ({
-  selectedProject: state.projectSelector.selected
+const mapStateToProps = (state) => ({
+  selectedProject: state.projectSelector.selected,
 });
 
 export default connect(mapStateToProps)(Main);
